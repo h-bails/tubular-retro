@@ -36,7 +36,7 @@ DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = [
     '8000-h-bails-pp5-tr09s2fklw.us2.codeanyapp.com',
-    'tubularretro.herokuapp.com']
+    'https://tubularretro-71f0ca94931e.herokuapp.com/']
 
 
 # Application definition
