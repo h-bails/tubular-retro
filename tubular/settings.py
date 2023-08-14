@@ -56,8 +56,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary_storage',
     'cloudinary',
-    'bootstrap5',
+    'bootstrap4',
     'django_extensions',
+    'home',
 ]
 
 AUTHENTICATION_BACKENDS = (
@@ -105,7 +106,10 @@ ROOT_URLCONF = 'tubular.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
