@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'django_extensions',
     'home',
+    'products',
 ]
 
 AUTHENTICATION_BACKENDS = (
