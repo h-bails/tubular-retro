@@ -1,0 +1,642 @@
+[
+ {
+   "model": "products.Product",
+   "pk": 1,
+   "fields": {
+      "title": "Jakobsson Markaryd 'Dome' lamp",
+      "description": "Pendant lamp designed in the 60s by Hans Agne Jakobsson for AB Markaryd, Sweden. The lamp consists of aluminum rings that create distinctive light effects and a lovely atmosphere.",
+      "measurements": "16\" L x 16\" W x 20\" H",
+      "condition": "Excellent",
+      "price": 350,
+      "sku": "SKU123456",
+      "category": 1,
+      "date_added": "2023-08-15",
+      "image_1": "media/jakobsson_markaryd_dome_lamp",
+      "image_1_url": "media/jakobsson_markaryd_dome_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 2,
+   "fields": {
+      "title": "Bauhaus pendant lamp",
+      "description": "Rare Bakelite industrial lamp. Produced by LBL (Leuchtenbau Leipzig), the factory that realized models for the Bauhaus in Dessau. This lamp is from the first GDR period ('50s).",
+      "measurements": "14\" L x 14\" W x 18\" H",
+      "condition": "Good",
+      "price": 400,
+      "sku": "SKU123457",
+      "category": 1,
+      "date_added": "2023-08-15",
+      "image_1": "media/bauhaus_pendant_lamp",
+      "image_1_url": "media/bauhaus_pendant_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 3,
+   "fields": {
+      "title": "Martinelli Gomito wall light",
+      "description": "Pair of Gomito, applique designed in 1974 by Elio Martinelli for Martinelli Luce, the company bearing his name. They are part of the very first editions still in lacquered metal. The direct light can be mounted on the wall facing downwards or upwards. The electric part works perfectly, requires an E27 bulb. Esthetically in very good condition, one of them presents some age marks in the inner part, invisible when mounted on the wall. They are part of the very first editions still in lacquered metal. The direct light can be mounted on the wall facing downwards or upwards. The electric part works perfectly, requires an E27 bulb. Esthetically in very good condition, one of them presents some age marks in the inner part, invisible when mounted on the wall.",
+      "measurements": "8\" L x 6\" W x 10\" H",
+      "condition": "Good",
+      "price": 270,
+      "sku": "SKU123458",
+      "category": 1,
+      "date_added": "2023-08-15",
+      "image_1": "media/martinelli_gomito_wall_light",
+      "image_1_url": "media/martinelli_gomito_wall_light"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 4,
+   "fields": {
+      "title": "Jucker Flos Tobia Scarpa lamp",
+      "description": "Designed by Tobia Scarpa for Flos in 1963, the Jucker lamp, thanks to the reflector in the shape of a pivoting helmet, allows to modulate and direct the light. Preceding the Eclipse lamp, we can consider it the first of a series inspired by the conquest of space. Some say that Stanley Kubrick had one on his bedside table.",
+      "measurements": "6\" L x 6\" W x 12\" H",
+      "condition": "Fair",
+      "price": 600,
+      "sku": "SKU123459",
+      "category": 1,
+      "date_added": "2023-08-15",
+      "image_1": "media/jucker_flos_tobia_scarpa_lamp",
+      "image_1_url": "media/jucker_flos_tobia_scarpa_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 5,
+   "fields": {
+      "title": "Braun SK 25 Radio",
+      "description": "Braun SK 25 radio designed by Arthur Braun and Fritz Eichler and produced by the historical German brand from 1961 to 1964. It has some signs and yellowing due to age and a small crack in the corner of the rear panel, but aesthetically it's in good condition. It works perfectly.",
+      "measurements": "12\" L x 7\" W x 5\" H",
+      "condition": "Excellent",
+      "price": 250,
+      "sku": "SKU123460",
+      "category": 2,
+      "date_added": "2023-08-15",
+      "image_1": "media/braun_sk_25_radio",
+      "image_1_url": "media/braun_sk_25_radio"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 6,
+   "fields": {
+      "title": "70s Pendant Lamp",
+      "description": "70s chandelier formed by a system of white and orange circles that can assume different positions and create different lighting effects. In excellent condition, few signs of use. It has six light connectors E14, just one not working.",
+      "measurements": "15\" L x 15\" W x 20\" H",
+      "condition": "Fair",
+      "price": 150,
+      "sku": "SKU123461",
+      "category": 1,
+      "date_added": "2023-08-15",
+      "image_1": "media/70s_pendant_lamp",
+      "image_1_url": "media/70s_pendant_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 7,
+   "fields": {
+      "title": "Zanotta Giotto stool",
+      "description": "The stool Giotto, produced by Zanotta in 1975, represents very well the spirit of the designers De Pas, D'Urbino and Lomazzi that in those years were committed to designing solid, simple and functional objects. The structure is composed of elements in solid beech wood held together by a metal cruise. The seat rotates and is adjusted up to a maximum of 55 cm heigh.",
+      "measurements": "14\" L x 14\" W x 18\" H",
+      "condition": "Good",
+      "price": 450,
+      "sku": "SKU123462",
+      "category": 3,
+      "date_added": "2023-08-15",
+      "image_1": "media/zanotta_giotto_stool",
+      "image_1_url": "media/zanotta_giotto_stool"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 8,
+   "fields": {
+      "title": "Artemide lamp",
+      "description": "Boalum lamp designed in 1969 by Gianfranco Frattini and Livio Castiglioni, the eldest of the three brothers. Produced by Artemide since 1970 in reinforced opal white PVC. Extremely flexible it can be placed on the floor, on a table or even hung on the wall, it provides a warm and diffuse light. One of the most ingenious and original design objects of the XX century, is located in the permanent collection of the Museum of the Triennale in Milan.",
+      "measurements": "6\" L x 6\" W x 14\" H",
+      "condition": "Good",
+      "price": 300,
+      "sku": "SKU123463",
+      "category": 1,
+      "date_added": "2023-08-15",
+      "image_1": "media/artemide_lamp",
+      "image_1_url": "media/artemide_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 9,
+   "fields": {
+      "title": "Artemide pen holder",
+      "description": "Pen holder Dedalino designed in 1966 by Emma Gismondi Schweinberger and produced by Artemide for the series Dedalo, which includes the umbrella stand of the same name and the flower vase Dedalotto. In excellent condition, has only a slight yellowing due to age.",
+      "measurements": "4\" L x 4\" W x 4\" H",
+      "condition": "Excellent",
+      "price": 110,
+      "sku": "SKU123464",
+      "category": 5,
+      "date_added": "2023-08-15",
+      "image_1": "media/artemide_pen_holder",
+      "image_1_url": "media/artemide_pen_holder"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 10,
+   "fields": {
+      "title": "Braun SK6 turntable",
+      "description": "Braun SK6, a rare turntable designed by Dieter Rams and Hans Gugelot in 1961. Able to play 33, 45 and 78 rpm, it's also a radio. It works perfectly, being recently restored. Aesthetical condition is excellent, paint finish with consistent colour, all graphics complete and acrylic lid unscratched, a small lack in the wood.",
+      "measurements": "14\" L x 12\" W x 5\" H",
+      "condition": "Fair",
+      "price": 500,
+      "sku": "SKU123465",
+      "category": 2,
+      "date_added": "2023-08-15",
+      "image_1": "media/braun_sk6_turntable",
+      "image_1_url": "media/braun_sk6_turntable"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 11,
+   "fields": {
+      "title": "Braun 550 hair dryer",
+      "description": "Braun 550 hair dryer, known as 'the pistolgrip', designed in 1972 by Heinz Ulrich Haase for the historical German brand Braun. Perfectly preserved and functional.",
+      "measurements": "8\" L x 4\" W x 10\" H",
+      "condition": "Good",
+      "price": 60,
+      "sku": "SKU123466",
+      "category": 2,
+      "date_added": "2023-08-15",
+      "image_1": "media/braun_550_hair_dryer",
+      "image_1_url": "media/braun_550_hair_dryer"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 12,
+   "fields": {
+      "title": "Midcentury Zanuso Grillo phone",
+      "description": "Designed by Marco Zanuso and Richard Sapper, the Grillo phone is a milestone in the Italian design of the 60s. In addition to the snap-opening, that anticipates the design of some mobile phones, it has a buzzing ringtone placed in the plug of the telephone, from which derives its name Grillo. it won the \"Compasso d'oro\" in 1967.",
+      "measurements": "9\" L x 9\" W x 6\" H",
+      "condition": "Excellent",
+      "price": 210,
+      "sku": "SKU123467",
+      "category": 2,
+      "date_added": "2023-08-15",
+      "image_1": "media/midcentury_zanuso_grillo_phone",
+      "image_1_url": "media/midcentury_zanuso_grillo_phone"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 13,
+   "fields": {
+      "title": "Sirio lamp",
+      "description": "Sirio is an elegant table or bed lamp comprised of two glowing half-spheres, spaced slightly apart to allow white light to escape from within. Designed in 1970 by Sergio Brazzoli and Ermanno Lampa for the Italian historical Design House Guzzini.",
+      "measurements": "7\" L x 7\" W x 12\" H",
+      "condition": "Good",
+      "price": 280,
+      "sku": "SKU123469",
+      "category": 1,
+      "date_added": "2023-08-16",
+      "image_1": "media/sirio_lamp",
+      "image_1_url": "media/sirio_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 14,
+   "fields": {
+      "title": "Nesso Artemide lamp",
+      "description": "Table lamp Nesso, designed by Giancarlo Mattioli in 1967 and realized by Artemide. Milano. Made entirely of ABS resin, a plastic material relatively new for those years. The light is diffused softly and warmly by four bulbs (40W), shielded by the \"umbrella\".",
+      "measurements": "13\" L x 13\" W x 8\" H",
+      "condition": "Excellent",
+      "price": 320,
+      "sku": "SKU123470",
+      "category": 1,
+      "date_added": "2023-08-16",
+      "image_1": "media/nesso_artemide_lamp",
+      "image_1_url": "media/nesso_artemide_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 15,
+   "fields": {
+      "title": "Eclisse Vico Magistretti Artemide lamp",
+      "description": "True icon of Italian design Eclisse, the table lamp by Vico Magistretti, thanks to a brilliant composition allows a simple and functional modulation of light. Produced by Artemide since 1966, it's still in production. The new ones have a black plastic wheel which modifies the original design.",
+      "measurements": "6\" L x 6\" W x 7\" H",
+      "condition": "Fair",
+      "price": 290,
+      "sku": "SKU123471",
+      "category": 1,
+      "date_added": "2023-08-16",
+      "image_1": "media/eclisse_vico_magistretti_artemide_lamp",
+      "image_1_url": "media/eclisse_vico_magistretti_artemide_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 16,
+   "fields": {
+      "title": "Efebo Stacy Duke Artemide chair",
+      "description": "Dark red moulded plastic low chair. Designed for Artemide in 1966 by the American designer Stacy Dukes. It has the typical organic forms of space age design, so as to be part of the set designing of 'Space 1999', famous '70s sci-fi series.",
+      "measurements": "14\" L x 14\" W x 20\" H",
+      "condition": "Good",
+      "price": 700,
+      "sku": "SKU123472",
+      "category": 3,
+      "date_added": "2023-08-16",
+      "image_1": "media/efebo_stacy_duke_artemide_chair",
+      "image_1_url": "media/efebo_stacy_duke_artemide_chair"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 17,
+   "fields": {
+      "title": "Zanuso Export 4000 Terraillon kitchen scale",
+      "description": "Kitchen scale model Export 4000, designed in 1969 by Marco Zanuso and Richard Sapper for French brand Terraillon. Reads the weight of the ingredients up to 4 kg and is comprehensive of the largest container. It is part of the design collection of MOMA.",
+      "measurements": "12\" L x 10\" W x 2\" H",
+      "condition": "Good",
+      "price": 120,
+      "sku": "SKU123473",
+      "category": 4,
+      "date_added": "2023-08-16",
+      "image_1": "media/zanuso_export_4000_terraillon_kitchen_scale",
+      "image_1_url": "media/zanuso_export_4000_terraillon_kitchen_scale"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 18,
+   "fields": {
+      "title": "Alexander Begge Casala chair",
+      "description": "Red orange chair made from molded ABS. Designed in early 70s by Alexander Begge and manufactured by Casala in West Germany. It's part of Casalino furniture line, the only one designed by Begge. Original condition with small traces of usage on the plastic surface.",
+      "measurements": "18\" L x 18\" W x 32\" H",
+      "condition": "Excellent",
+      "price": 750,
+      "sku": "SKU123474",
+      "category": 3,
+      "date_added": "2023-08-16",
+      "image_1": "media/alexander_begge_casala_chair",
+      "image_1_url": "media/alexander_begge_casala_chair"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 19,
+   "fields": {
+      "title": "Jucker Flos Tobia Scarpa lamp",
+      "description": "Designed by Tobia Scarpa for Flos in 1963, the Jucker lamp, thanks to the reflector in the shape of a pivoting helmet, allows to modulate and direct the light. Preceding the Eclipse lamp, we can consider it the first of a series inspired by the conquest of space. Some say that Stanley Kubrick had one on his bedside table.",
+      "measurements": "6\" L x 6\" W x 14\" H",
+      "condition": "Fair",
+      "price": 600,
+      "sku": "SKU123475",
+      "category": 1,
+      "date_added": "2023-08-16",
+      "image_1": "media/jucker_flos_tobia_scarpa_lamp",
+      "image_1_url": "media/jucker_flos_tobia_scarpa_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 20,
+   "fields": {
+      "title": "Martinelli Cobra lamp",
+      "description": "Cobra lamp designed by Elio Martinelli for Martinelli Luce in 1969, a true masterpiece of design of the XX century. Characterized by organic free-flowing lines and by a timeless form, is a table lamp with a very functional upper revolving arm that allows a rotation of 360 degrees.",
+      "measurements": "8\" L x 8\" W x 15\" H",
+      "condition": "Good",
+      "price": 350,
+      "sku": "SKU123476",
+      "category": 1,
+      "date_added": "2023-08-16",
+      "image_1": "media/martinelli_cobra_lamp",
+      "image_1_url": "media/martinelli_cobra_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 21,
+   "fields": {
+      "title": "Downhill Racer' original poster",
+      "description": "Original poster for the film Downhill Racer with Robert Redford and Gene Hackman. Directed by Michael Ritchie, also director of The Candidate, is the first film about ski racing. Printed in 1969 for the first film's release in the United States..",
+      "measurements": "28\" L x 20\" W",
+      "condition": "Excellent",
+      "price": 50,
+      "sku": "SKU123477",
+      "category": 5,
+      "date_added": "2023-08-18",
+      "image_1": "media/downhill_racer_original_poster",
+      "image_1_url": "media/downhill_racer_original_poster"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 22,
+   "fields": {
+      "title": "Max Bill Alfabeto Bolaffi Arte print",
+      "description": "\"Letter N\" original composition created in 1973 by Max Bill for the limited edition 'Alphabet' of Bolaffiarte. Photolithographic printing (6 colors offset) number 4073 of 5000. Author's signature at the bottom right.",
+      "measurements": "20\" L x 14\" W",
+      "condition": "Fair",
+      "price": 60,
+      "sku": "SKU123478",
+      "category": 5,
+      "date_added": "2023-08-18",
+      "image_1": "media/max_bill_alfabeto_bolaffi_arte_print",
+      "image_1_url": "media/max_bill_alfabeto_bolaffi_arte_print"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 23,
+   "fields": {
+      "title": "Giotto Stoppino - magazine rack - Kartell",
+      "description": "Magazine rack 4675, true icon of Kartell, designed in 1971 by Giotto Stoppino and put into production in 1972. Original version with six compartments, in excellent condition, has just a slight yellowing of the plastic.",
+      "measurements": "14\" L x 12\" W x 18\" H",
+      "condition": "Good",
+      "price": 400,
+      "sku": "SKU123479",
+      "category": 5,
+      "date_added": "2023-08-18",
+      "image_1": "media/giotto_stoppino_magazine_rack_kartell",
+      "image_1_url": "media/giotto_stoppino_magazine_rack_kartell"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 24,
+   "fields": {
+      "title": "Nintendo Gameboy - Green",
+      "description": "A throwback to early handheld gaming. Good working order.",
+      "measurements": "5.8\" L x 3.2\" W x 1\" H",
+      "condition": "Excellent",
+      "price": 80,
+      "sku": "SKU123480",
+      "category": 2,
+      "date_added": "2023-08-18",
+      "image_1": "media/nintendo_gameboy_green",
+      "image_1_url": "media/nintendo_gameboy_green"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 25,
+   "fields": {
+      "title": "Nintendo Gameboy - White",
+      "description": "A throwback to early handheld gaming. Good working order.",
+      "measurements": "5.8\" L x 3.2\" W x 1\" H",
+      "condition": "Fair",
+      "price": 80,
+      "sku": "SKU123481",
+      "category": 2,
+      "date_added": "2023-08-18",
+      "image_1": "media/nintendo_gameboy_white",
+      "image_1_url": "media/nintendo_gameboy_white"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 26,
+   "fields": {
+      "title": "Rotary phone - Peach",
+      "description": "A cute rotary phone harking back to a slower-paced era. In good working order.",
+      "measurements": "9\" L x 5\" W x 5\" H",
+      "condition": "Good",
+      "price": 70,
+      "sku": "SKU123482",
+      "category": 2,
+      "date_added": "2023-08-18",
+      "image_1": "media/rotary_phone_peach",
+      "image_1_url": "media/rotary_phone_peach"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 27,
+   "fields": {
+      "title": "Polaroid camera",
+      "description": "A classic camera combining 80s nostalgia with instant gratification, producing iconic white-bordered photos.",
+      "measurements": "4.5\" L x 4.7\" W x 3.7\" H",
+      "condition": "Excellent",
+      "price": 120,
+      "sku": "SKU123483",
+      "category": 2,
+      "date_added": "2023-08-18",
+      "image_1": "media/polaroid_camera",
+      "image_1_url": "media/polaroid_camera"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 28,
+   "fields": {
+      "title": "Praktika Camera",
+      "description": "A classic film camera in fair condition.",
+      "measurements": "5.5\" L x 3.8\" W x 3.6\" H",
+      "condition": "Fair",
+      "price": 150,
+      "sku": "SKU123484",
+      "category": 2,
+      "date_added": "2023-08-19",
+      "image_1": "media/praktika_camera",
+      "image_1_url": "media/praktika_camera"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 29,
+   "fields": {
+      "title": "Midcentury leather and teak chair",
+      "description": "Midcentury Danish-style lounge chair, in black leather and teak.",
+      "measurements": "30\" L x 30\" W x 35\" H",
+      "condition": "Good",
+      "price": 700,
+      "sku": "SKU123485",
+      "category": 3,
+      "date_added": "2023-08-19",
+      "image_1": "media/midcentury_leather_and_teak_chair",
+      "image_1_url": "media/midcentury_leather_and_teak_chair"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 30,
+   "fields": {
+      "title": "Philips record player",
+      "description": "Turntable in perfect working order. Great for those music lovers who are into their records. ",
+      "measurements": "14\" L x 14\" W x 6\" H",
+      "condition": "Excellent",
+      "price": 250,
+      "sku": "SKU123486",
+      "category": 2,
+      "date_added": "2023-08-19",
+      "image_1": "media/philips_record_player",
+      "image_1_url": "media/philips_record_player"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 31,
+   "fields": {
+      "title": "60s lamp",
+      "description": "Yellow ceramic lamp base with linen lampshade, likely from the 70s.",
+      "measurements": "16\" L x 16\" W x 25\" H",
+      "condition": "Fair",
+      "price": 200,
+      "sku": "SKU123487",
+      "category": 1,
+      "date_added": "2023-08-19",
+      "image_1": "media/60s_lamp",
+      "image_1_url": "media/60s_lamp"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 32,
+   "fields": {
+      "title": "Midcentury hostess trolley",
+      "description": "Metal and acrylic hostess trolley/drinks trolley, likely from the 60s.",
+      "measurements": "30\" L x 15\" W x 28\" H",
+      "condition": "Good",
+      "price": 350,
+      "sku": "SKU123488",
+      "category": 3,
+      "date_added": "2023-08-19",
+      "image_1": "media/midcentury_hostess_trolley",
+      "image_1_url": "media/midcentury_hostess_trolley"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 33,
+   "fields": {
+      "title": "Lava lamp - red and yellow",
+      "description": "A groovy encapsulation of the free-spirited ambiance of the '60s-90s. ",
+      "measurements": "3\" L x 3\" W x 16\" H",
+      "condition": "Excellent",
+      "price": 90,
+      "sku": "SKU123489",
+      "category": 1,
+      "date_added": "2023-08-19",
+      "image_1": "media/lava_lamp_red_and_yellow",
+      "image_1_url": "media/lava_lamp_red_and_yellow"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 34,
+   "fields": {
+      "title": "Lava lamp - yellow",
+      "description": "A groovy encapsulation of the free-spirited ambiance of the '60s-90s. ",
+      "measurements": "3\" L x 3\" W x 16\" H",
+      "condition": "Fair",
+      "price": 90,
+      "sku": "SKU123490",
+      "category": 1,
+      "date_added": "2023-08-20",
+      "image_1": "media/lava_lamp_yellow",
+      "image_1_url": "media/lava_lamp_yellow"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 35,
+   "fields": {
+      "title": "Retro sun lounger/deckchair",
+      "description": "Retro deckchair with patterned cushion, the perfect vintage piece for lazy summer afternoons.",
+      "measurements": "24\" L x 30\" W x 35\" H",
+      "condition": "Good",
+      "price": 150,
+      "sku": "SKU123491",
+      "category": 3,
+      "date_added": "2023-08-20",
+      "image_1": "media/retro_sun_lounger",
+      "image_1_url": "media/retro_sun_lounger"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 36,
+   "fields": {
+      "title": "Antique atlas globe",
+      "description": "Antique atlas. The base is made from solid wood. Good condition.",
+      "measurements": "15\" L x 15\" W x 20\" H",
+      "condition": "Excellent",
+      "price": 200,
+      "sku": "SKU123492",
+      "category": 5,
+      "date_added": "2023-08-20",
+      "image_1": "media/antique_atlas_globe",
+      "image_1_url": "media/antique_atlas_globe"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 37,
+   "fields": {
+      "title": "Burmese teak sideboard",
+      "description": "A beautiful piece of midcentury craftsmanship. With its deep honey color and refined grain, it is an aesthetic storage solution that adds sophistication to any room.",
+      "measurements": "60\" L x 18\" W x 30\" H",
+      "condition": "Fair",
+      "price": 850,
+      "sku": "SKU123493",
+      "category": 3,
+      "date_added": "2023-08-20",
+      "image_1": "media/burmese_teak_sideboard",
+      "image_1_url": "media/burmese_teak_sideboard"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 38,
+   "fields": {
+      "title": "Poster - Montreal Winter Sports Festival 1924",
+      "description": "An authentic unframed poster from 1924 featuring the Montreal Winter Sports Festival.",
+      "measurements": "24\" L x 36\" W",
+      "condition": "Good",
+      "price": 40,
+      "sku": "SKU123494",
+      "category": 5,
+      "date_added": "2023-08-20",
+      "image_1": "media/poster_montreal_winter_sports_festival_1924",
+      "image_1_url": "media/poster_montreal_winter_sports_festival_1924"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 39,
+   "fields": {
+      "title": "Vintage desk calendar",
+      "description": "Phase One Alarm Clock designed by the Braun design Masters Dieter Rams and Dietrich Lubs of West Germany, dated 1971. This is an iconic mid century space age design, just prior to the introduction of the digital clock.",
+      "measurements": "6\" L x 6\" W x 3\" H",
+      "condition": "Excellent",
+      "price": 100,
+      "sku": "SKU123495",
+      "category": 5,
+      "date_added": "2023-08-20",
+      "image_1": "media/vintage_desk_calendar",
+      "image_1_url": "media/vintage_desk_calendar"
+   }
+},
+ {
+   "model": "products.Product",
+   "pk": 40,
+   "fields": {
+      "title": "Eighties pencil box",
+      "description": "Eighties pencil box with calendar in Rubik/Memphis style.",
+      "measurements": "8\" L x 3\" W x 1.5\" H",
+      "condition": "Fair",
+      "price": 30,
+      "sku": "SKU123496",
+      "category": 5,
+      "date_added": "2023-08-20",
+      "image_1": "media/eighties_pencil_box",
+      "image_1_url": "media/eighties_pencil_box"
+   }
+}
+]

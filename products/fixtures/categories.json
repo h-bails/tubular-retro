@@ -1,0 +1,50 @@
+[
+    {
+        "model": "products.Category",
+        "pk": 1,
+        "fields": {
+            "name": "Lighting",
+            "description": "Never turn the 'big light' on! Give your space some ambience with our retro lighting selection."
+        }
+    },
+    {
+        "model": "products.Category",
+        "pk": 2,
+        "fields": {
+            "name": "Electronics",
+            "description": "Technological wonders from years past."
+        }
+    },
+    {
+        "model": "products.Category",
+        "pk": 3,
+        "fields": {
+            "name": "Furniture",
+            "description": "Beautiful midcentury pieces - and classics for a reason."
+        }
+    },
+    {
+        "model": "products.Category",
+        "pk": 4,
+        "fields": {
+            "name": "Kitchenware",
+            "description": "Retro kitchenware that's so cute you might not even cook with it."
+        }
+    },
+    {
+        "model": "products.Category",
+        "pk": 5,
+        "fields": {
+            "name": "Decor",
+            "description": "Add a bit of personality to your space with these retro decor and design items."
+        }
+    },
+    {
+        "model": "products.Category",
+        "pk": 6,
+        "fields": {
+            "name": "Uncategorized",
+            "description": "These objects don't have a category yet."
+        }
+    }
+]

@@ -25,8 +25,6 @@ class Product(models.Model):
     date_added = models.DateField(auto_now=True)
     image_1 = models.ImageField(null=True, blank=True)
     image_1_url = models.URLField(max_length=1024, null=True, blank=True)
-    image_2 = models.ImageField(null=True, blank=True)
-    image_2_url = models.URLField(max_length=1024, null=True, blank=True)
 
     class Meta:
         ordering = ['-date_added']
