@@ -26,6 +26,11 @@ h4 {
     font-weight: bold;
 }
 
+.nav-logo {
+    width: 9em;
+    padding-bottom: 0.5em;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
