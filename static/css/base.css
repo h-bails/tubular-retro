@@ -10,6 +10,7 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 
+
 h1,
 h2,
 h3,
@@ -60,6 +61,20 @@ h4 {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+.products-container {
+    padding-top: 164px;
 }
 
 /* -------------------------------- Media Queries */
