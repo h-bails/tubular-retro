@@ -13,12 +13,12 @@
                 Shop by category
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Decor</a>
-                <a href="" class="dropdown-item">Electronics</a>
-                <a href="" class="dropdown-item">Furniture</a>
-                <a href="" class="dropdown-item">Kitchenware</a>
-                <a href="" class="dropdown-item">Lighting</a>
-                <a href="" class="dropdown-item">Uncategorized</a>
+                <a href="{% url 'products' %}?category=Decor" class="dropdown-item">Decor</a>
+                <a href="{% url 'products' %}?category=Electronics" class="dropdown-item">Electronics</a>
+                <a href="{% url 'products' %}?category=Furniture" class="dropdown-item">Furniture</a>
+                <a href="{% url 'products' %}?category=Kitchenware" class="dropdown-item">Kitchenware</a>
+                <a href="{% url 'products' %}?category=Lighting" class="dropdown-item">Lighting</a>
+                <a href="{% url 'products' %}?category=Uncategorized" class="dropdown-item">Uncategorized</a>
             </div>
         </li>
     </ul>
