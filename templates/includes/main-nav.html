@@ -1,0 +1,25 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}"
+                id="all-products-link" aria-haspopup="true" aria-expanded="false">
+                Shop all
+            </a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Shop by category
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a href="" class="dropdown-item">Decor</a>
+                <a href="" class="dropdown-item">Electronics</a>
+                <a href="" class="dropdown-item">Furniture</a>
+                <a href="" class="dropdown-item">Kitchenware</a>
+                <a href="" class="dropdown-item">Lighting</a>
+                <a href="" class="dropdown-item">Uncategorized</a>
+            </div>
+        </li>
+    </ul>
+</div>
