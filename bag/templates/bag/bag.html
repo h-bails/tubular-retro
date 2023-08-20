@@ -16,6 +16,7 @@
         <div class="col">
             <hr>
             <h2 class="logo-font mb-4">Shopping bag</h2>
+            <p class="text-muted">Free delivery on orders over €{{ free_delivery_threshold }}</p>
             <hr>
         </div>
     </div>
@@ -24,8 +25,8 @@
             {% if bag_items %}
             <div class="table-responsive rounded"></div>
             {% else %}
-            <p class="lead mb-5">Your bag is empty. Why not check out our <a href="{% url 'products' %}"></a>current
-                stock?</a></p>
+            <p class="lead mb-5">Your bag is empty. Why not check out our <a href="{% url 'products' %}">current
+                    stock?</a></p>
             {% endif %}
         </div>
     </div>
