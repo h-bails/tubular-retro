@@ -11,7 +11,7 @@ def all_products(request):
 
     products = Product.objects.all()
     query = None
-    category = None
+    selected_category = None
     sort = None
     direction = None
 
@@ -23,7 +23,8 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -31,9 +32,9 @@ def all_products(request):
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
-            category = request.GET['category']
-            products = products.filter(category__name__iexact=category)
-            category = Category.objects.filter(name__in=category)
+            selected_category = request.GET['category']
+            products = products.filter(
+                category__name__iexact=selected_category)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -50,7 +51,7 @@ def all_products(request):
     context = {
         'products': products,
         'search_term': query,
-        'current_category': category,
+        'current_category': selected_category,
         'current_sorting': current_sorting,
     }
     return render(request, 'products/products.html', context)
