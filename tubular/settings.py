@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'home',
     'products',
+    'bag',
 ]
 
 AUTHENTICATION_BACKENDS = (
