@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Category
 
 # Create your views here.
@@ -42,7 +43,7 @@ def all_products(request):
                 messages.error(request, "Please enter some search criteria.")
                 return redirect(reverse('products'))
 
-            queries = Q(title__icontains=query) | Q(
+            queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
             products = products.filter(queries)
 

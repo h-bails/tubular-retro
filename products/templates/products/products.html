@@ -43,7 +43,7 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                        <span class="small"><a href="{% url 'products' %}">Show all products</a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
@@ -55,16 +55,16 @@
                         <div class="card h-100 border-0">
                             {% if product.image_1 %}
                             <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid"
-                                    src="{{ product.image_1_url }}" alt="{{ product.title }}">
+                                    src="{{ product.image_1_url }}" alt="{{ product.name }}">
                             </a>
                             {% else %}
                             <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid"
-                                    src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.title }}">
+                                    src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}">
                             </a>
                             {% endif %}
                             <div class="card-body pb-0">
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <h4 class="mb-0">{{ product.title }}<h4>
+                                    <h4 class="mb-0">{{ product.name }}<h4>
                                 </a>
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
@@ -88,4 +88,30 @@
                 </div>
         </div>
     </div>
-    {% endblock %}
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+    <script type="text/javascript">
+        $('#sort-selector').change(function(){
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
+{% endblock %}

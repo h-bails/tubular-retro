@@ -17,7 +17,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     '''Model for the products'''
-    title = models.CharField(max_length=254)
+    name = models.CharField(max_length=254)
     description = models.TextField(max_length=1000)
     measurements = models.CharField(max_length=254)
     condition = models.CharField(max_length=20)
@@ -33,4 +33,4 @@ class Product(models.Model):
         ordering = ['-date_added']
 
     def __str__(self):
-        return self.title
+        return self.name
