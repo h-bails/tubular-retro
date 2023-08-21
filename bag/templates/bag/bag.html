@@ -42,8 +42,8 @@
                             <td class="py-3">
                                 <p class="my-0"><strong>{{ product.name }}</strong></p>
                                 <p class="my-0 small text-muted">SKU: {{ product.sku|upper }}</p>
-                                <a class="remove-item text-danger float-right"
-                                    id="remove_{{ product.item_id }}"><small>Remove</small></a>
+                                <a class="remove-item text-danger float-right" data-item-id="{{ product.id }}"
+                                    id="remove_{{ product.id }}"><small>Remove</small></a>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">€{{ product.price }}</p>
@@ -96,12 +96,11 @@
 {{ block.super }}
 
 <script type="text/javascript">
-
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}`;
+        var csrfToken = '{{ csrf_token }}';
+        var itemId = $(this).data('item-id');
+        var url = `/bag/remove/${itemId}/`;
         var data = { 'csrfmiddlewaretoken': csrfToken };
 
         $.post(url, data)
