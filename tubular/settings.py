@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'bag',
+    'checkout',
 ]
 
 AUTHENTICATION_BACKENDS = (
