@@ -5,6 +5,7 @@ Django==3.2.20
 django-allauth==0.41.0
 django-bootstrap4==23.2
 django-cloudinary-storage==0.3.0
+django-crispy-forms==1.14.0
 django-extensions==3.2.3
 gunicorn==21.2.0
 heroku==0.1.4
