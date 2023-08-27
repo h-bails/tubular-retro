@@ -1,7 +1,10 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
+
 from .forms import OrderForm
+from .models import Order, OrderLineItem
+from products.models import Product
 from bag.contexts import bag_contents
 
 import stripe
@@ -21,29 +24,21 @@ def checkout(request):
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
-            'street_address1': request.POST['street_address1'],
-            'street_address2': request.POST['street_address2'],
+            'street_address_1': request.POST['street_address_1'],
+            'street_address_2': request.POST['street_address_2'],
             'county': request.POST['county'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
-            for item_id, item_data in bag.items():
+            for item_id in bag:
                 try:
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                        )
-                        order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                            )
-                            order_line_item.save()
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                    )
+                    order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
@@ -85,5 +80,28 @@ def checkout(request):
         'stripe_public_key': settings.STRIPE_PUBLIC_KEY,
         'client_secret': intent.client_secret,
     }
+
+    return render(request, template, context)
+
+def checkout_success(request, order_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order placed successfully. \
+    Your order number is {order_number}. A confirmation email will be \
+    sent to {order.email}.')
+
+
+    if 'bag' in request.session:
+        del request.session['bag']
+
+
+    template = 'checkout/checkout_success.html'
+    context = {
+    'order': order,
+    }
+
 
     return render(request, template, context)
