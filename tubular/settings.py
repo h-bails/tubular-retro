@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'crispy_forms',
+    'profiles',
 ]
 
 AUTHENTICATION_BACKENDS = (
