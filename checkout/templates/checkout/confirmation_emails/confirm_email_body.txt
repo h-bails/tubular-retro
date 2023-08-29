@@ -1,0 +1,28 @@
+Howdy {{ order.full_name }}!
+
+This is a confirmation of your order from Tubular Retro. Your order information is below:
+
+Order number: {{ order.order_number }}
+Order date: {{ order.date }}
+
+Your items:
+{% for item in order.lineitems.all %}
+{{ item.product.name }} 
+{% endfor %}
+
+Order Total: €{{ order.order_total }}
+Delivery: €{{ order.delivery_cost }}
+Grand Total: €{{ order.grand_total }}
+
+Your order will be shipped to:
+{{ order.street_address_1 }}
+{{ order.town_or_city }}
+{{ order.country }}.
+
+If you have any questions, please reach out to us at {{ contact_email }}.
+
+Thanks for supporting our small business.
+
+Sincerely,
+
+Tubular Team

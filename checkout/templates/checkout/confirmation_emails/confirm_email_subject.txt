@@ -1,0 +1,1 @@
+Groovy! Here's your confirmation for order #{{ order.order_number }}
