@@ -112,11 +112,9 @@ def edit_product(request, product_id):
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store admins can do that.')
-        return redirect(reverse('home')
+        return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
-    form = ProductForm(instance=product)
-
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
@@ -146,7 +144,7 @@ def delete_product(request, product_id):
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store admins can do that.')
-        return redirect(reverse('home')
+        return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
