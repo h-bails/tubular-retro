@@ -20,7 +20,7 @@
             {% for item in bag_items %}
             <div class="row">
                 <div class="col my-1">
-                    {% if item.image_1_url %}
+                    {% if item.image_1 %}
                     <img class="w-100" src="{{ item.image_1.url }}" alt="{{ item.name }}">
                     {% else %}
                     <img class="w-100" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ item.name }}">
