@@ -198,7 +198,7 @@ if 'USE_AWS' in os.environ:
     AWS_S3_REGION_NAME = 'eu-west-1'
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_KEY_ID')
-    AWS_S3_CUSTOM_DOMAIN = 'tubularretro.s3-website-eu-west-1.amazonaws.com'
+    AWS_S3_CUSTOM_DOMAIN = 'tubularretro.s3.eu-west-1.amazonaws.com'
     
     # Static and media files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
