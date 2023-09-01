@@ -129,8 +129,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tubular.wsgi.application'
 
 
-Database
-https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# Database
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 if "DATABASE_URL" in os.environ:
     DATABASES = {
