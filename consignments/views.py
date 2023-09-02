@@ -29,3 +29,21 @@ def submit_consignment(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def manage_consignments(request):
+    """
+    Manage consignment requests (admin only)
+    """
+    if not request.user.is_superuser:
+        return render(request, '403.html', status=403)
+
+    consignments = Consignment.objects.all()
+    template = 'consignments/manage_consignments.html'
+
+    context = {
+        'consignments': consignments,
+    }
+
+    return render(request, template, context)

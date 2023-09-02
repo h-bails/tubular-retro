@@ -10,6 +10,8 @@ class Consignment(models.Model):
 
     name = models.CharField(max_length=254)
     description = models.TextField(max_length=1000)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE, 
+                                     null=True, blank=True, related_name='consignments')
     date_submitted = models.DateField(auto_now=True)
     status = models.CharField(
         max_length=20,

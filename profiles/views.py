@@ -5,6 +5,7 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 from checkout.models import Order
+from consignments.models import Consignment
 
 
 @login_required
@@ -24,11 +25,13 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile) 
     orders = profile.orders.all()
+    consignments = profile.consignments.all()
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'consignments': consignments,
         'on_profile_page': True,
     }
 
