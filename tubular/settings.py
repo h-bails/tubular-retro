@@ -58,7 +58,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'profiles',
     'storages',
-    'consigmnents',
+    'consignments',
 ]
 
 AUTHENTICATION_BACKENDS = (

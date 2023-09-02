@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Category(models.Model):
     '''Model for the categories'''
@@ -27,7 +25,6 @@ class Product(models.Model):
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     date_added = models.DateField(auto_now=True)
     image_1 = models.ImageField(null=True, blank=True)
-    image_1_url = models.URLField(max_length=1024, null=True, blank=True)
 
     class Meta:
         ordering = ['-date_added']

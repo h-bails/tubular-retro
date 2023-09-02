@@ -13,7 +13,6 @@ class ProductAdmin(admin.ModelAdmin):
         'sku',
         'category',
         'image_1',
-        'image_1_url',
     )
 
     ordering = ('date_added',)
