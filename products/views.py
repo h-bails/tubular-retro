@@ -81,8 +81,7 @@ def add_product(request):
     Add a product to the store (admin only)
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store admins can do that.')
-        return redirect(reverse('home'))
+        return render(request, '403.html', status=403)
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -111,8 +110,7 @@ def edit_product(request, product_id):
     """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store admins can do that.')
-        return redirect(reverse('home'))
+        return render(request, '403.html', status=403)
 
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
@@ -143,8 +141,7 @@ def delete_product(request, product_id):
     """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store admins can do that.')
-        return redirect(reverse('home'))
+        return render(request, '403.html', status=403)
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()

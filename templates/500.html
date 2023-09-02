@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <img class="mb-3" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmQ1cjhjaG1qcGM3bDI0Y2R3cWkzbWZiMHprMDBkajE3NTVrZTBiYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TIejJSkHLZh4s/giphy.gif" alt="">
+            <h4>500</h4>
+            <p>This one's probably on us. Please try again later.</p>
+            <a href="{% url 'home' %}">Go back home</a>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

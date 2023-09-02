@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <img class="mb-3" src="https://media4.giphy.com/media/bKj0qEKTVBdF2o5Dgn/200.webp?cid=ecf05e478c8xa6lr5g73m09x6bngfbp9i50fhye5fadvx6fi&ep=v1_gifs_related&rid=200.webp&ct=g" alt="">
+            <h4>403</h4>
+            <p>You're not allowed to do that.</p>
+            <a href="{% url 'home' %}">Okay... I'll go back home.</a>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
