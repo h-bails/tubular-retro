@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Consignment
 from .forms import ConsignmentForm
+from checkout.models import UserProfile
 
 
 @login_required
@@ -14,7 +15,10 @@ def submit_consignment(request):
     if request.method == 'POST':
         form = ConsignmentForm(request.POST, request.FILES)
         if form.is_valid():
-            consignment = form.save()
+            consignment = form.save(commit=False)
+            profile = UserProfile.objects.get(user=request.user)
+            consignment.user_profile = profile
+            consignment.save()
             messages.success(request, "Consignment request submitted.")
             return redirect('profile')
         else:
