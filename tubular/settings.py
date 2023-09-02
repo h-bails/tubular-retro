@@ -49,8 +49,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'cloudinary_storage',
-    'cloudinary',
     'bootstrap4',
     'django_extensions',
     'home',
@@ -60,6 +58,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'profiles',
     'storages',
+    'consigmnents',
 ]
 
 AUTHENTICATION_BACKENDS = (
