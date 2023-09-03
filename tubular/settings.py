@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-h-bails-pp5-tr09s2fklw.us2.codeanyapp.com',
+    '8000-h-bails-pp5-hzpithnx2h.us2.codeanyapp.com',
     'tubularretro-71f0ca94931e.herokuapp.com']
 
 
@@ -195,7 +195,7 @@ if 'USE_AWS' in os.environ:
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_KEY_ID')
     AWS_S3_CUSTOM_DOMAIN = 'tubularretro.s3.eu-west-1.amazonaws.com'
-    
+
     # Static and media files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     STATICFILES_LOCATION = 'static'
