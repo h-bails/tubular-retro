@@ -78,7 +78,7 @@
                     {% for consignment in consignments %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0">
-                            {% if consignment.image_1.url %}
+                            {% if consignment.image_1 %}
                             <img class="card-img-top img-fluid" src="{{ consignment.image_1.url }}"
                                 alt="{{ consignment.name }}">
                             {% else %}
@@ -90,7 +90,8 @@
                                         {% if consignment.status == '1' %}
                                         <a href="{% url 'edit_consignment' consignment.id %}">
                                             <p>Edit</p>
-                                        </a>|<a href="{% url 'delete_consignment' consignment.id %}">
+                                        </a>
+                                        <a href="{% url 'delete_consignment' consignment.id %}">
                                             <p>Delete</p>
                                         </a>
                                         {% endif %}

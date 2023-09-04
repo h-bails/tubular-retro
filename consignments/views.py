@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Consignment
@@ -97,7 +97,7 @@ def edit_consignment(request, consignment_id):
 
 @login_required
 def delete_consignment(request, consignment_id):
-    """ 
+    """
     Allows consignment creator to delete their submission
     """
     consignment = get_object_or_404(Consignment, pk=consignment_id)
@@ -114,3 +114,30 @@ def delete_consignment(request, consignment_id):
     consignment.delete()
     messages.success(request, 'Request deleted!')
     return redirect('profile')
+
+
+@login_required
+def confirm_consignment(request, consignment_id):
+    """
+    Approve consignment requests (admin only)
+    """
+    if not request.user.is_superuser:
+        return render(request, '403.html', status=403)
+
+    consignment = get_object_or_404(Consignment, pk=consignment_id)
+    user_profile = consignment.user_profile
+    status = request.GET['status']
+
+    if status == "approve":
+        consignment.status = Consignment.Status.APPROVED
+        consignment.save()
+        messages.success(request, 'Consignment request approved.')
+        return redirect(reverse('manage_consignments'))
+    elif status == "decline":
+        consignment.status = Consignment.Status.DECLINED
+        messages.error(request, 'Consignment request declined.')
+        consignment.save()
+        return redirect(reverse('manage_consignments'))
+    else:
+        messages.error(request, "Invalid consignment status.")
+        return redirect('profile')

@@ -8,5 +8,6 @@ urlpatterns = [
          name='edit_consignment'),
     path('delete/<int:consignment_id>/', views.delete_consignment,
          name='delete_consignment'),
-
+    path('confirm/<int:consignment_id>/', views.confirm_consignment,
+         name='confirm_consignment'),
 ]
