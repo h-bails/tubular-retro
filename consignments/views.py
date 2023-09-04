@@ -93,3 +93,24 @@ def edit_consignment(request, consignment_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_consignment(request, consignment_id):
+    """ 
+    Allows consignment creator to delete their submission
+    """
+    consignment = get_object_or_404(Consignment, pk=consignment_id)
+    profile = UserProfile.objects.get(user=request.user)
+
+    if consignment.status != '1':
+        messages.error(request, 'Sorry, you cannot delete a consignment that\
+                        has already been reviewed.')
+        return redirect('profile')
+
+    if consignment.user_profile != profile:
+        return render(request, '403.html', status=403)
+
+    consignment.delete()
+    messages.success(request, 'Request deleted!')
+    return redirect('profile')

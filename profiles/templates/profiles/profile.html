@@ -90,6 +90,8 @@
                                         {% if consignment.status == '1' %}
                                         <a href="{% url 'edit_consignment' consignment.id %}">
                                             <p>Edit</p>
+                                        </a>|<a href="{% url 'delete_consignment' consignment.id %}">
+                                            <p>Delete</p>
                                         </a>
                                         {% endif %}
                             </div>
@@ -102,6 +104,8 @@
                             </div>
                         </div>
                     </div>
+                    {% empty %}
+                    <p>You have no consignment requests yet.</p>
                     {% endfor %}
                 </div>
             </div>
