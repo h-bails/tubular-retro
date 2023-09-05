@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'profiles',
     'storages',
     'consignments',
+    'contact',
 ]
 
 AUTHENTICATION_BACKENDS = (
