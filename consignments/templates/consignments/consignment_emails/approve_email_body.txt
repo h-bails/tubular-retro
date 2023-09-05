@@ -1,0 +1,17 @@
+Howdy {{ consignment.user_profile.user.name }}!
+
+Your consignment request to Tubular Retro has been approved.
+For your reference, the consignment information is below:
+
+Item: {{ consignment.name }}
+Item description: {{ consignment.description }}
+
+As a next step, a member of our team will reach out to you to arrange 
+viewing and photography of the item. All approvals are subject to a final review
+of the condition of the item.
+
+If you have any questions, please reach out to us at {{ contact_email }}.
+
+Sincerely,
+
+Tubular Team

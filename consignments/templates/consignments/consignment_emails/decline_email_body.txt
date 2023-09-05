@@ -1,0 +1,21 @@
+Howdy {{ consignment.user_profile.full_name }}!
+
+Your consignment request to Tubular Retro has been respectfully declined. 
+This decision could stem from several factors, but more often than not, 
+it's because we do not foresee a significant demand for the particular item or 
+it doesn't align well with the overall theme of our shop.
+
+For your reference, the consignment information is below:
+
+Item: {{ consignment.name }}
+Item description: {{ consignment.description }}
+
+We truly appreciate your interest in consigning with us and encourage you to 
+explore other opportunities or items that might be better suited for our 
+collection. Thank you for considering Tubular Retro.
+
+If you have any questions, please reach out to us at {{ contact_email }}.
+
+Sincerely,
+
+Tubular Team

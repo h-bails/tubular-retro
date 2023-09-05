@@ -1,9 +1,61 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
+from django.conf import settings
+from django.template.loader import render_to_string
+
 from .models import Consignment
 from .forms import ConsignmentForm
 from checkout.models import UserProfile
+
+
+def send_consignment_email(consignment):
+    """ Send the submitter a confirmation email """
+
+    cust_email = consignment.user_profile.user.email
+
+    if consignment.status == Consignment.Status.SUBMITTED:
+        subject = 'We have received your consignment request'
+        body = render_to_string(
+            'consignments/consignment_emails/submit_email_body.txt',
+            {'consignment': consignment,
+             'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
+        )
+
+    elif consignment.status == Consignment.Status.APPROVED:
+        subject = 'Tubular! Your consignment request has been approved'
+        body = render_to_string(
+            'consignments/consignment_emails/approve_email_body.txt',
+            {'consignment': consignment,
+             'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
+        )
+
+    elif consignment.status == Consignment.Status.DECLINED:
+        subject = 'Your consignment request has been declined'
+        body = render_to_string(
+            'consignments/consignment_emails/decline_email_body.txt',
+            {'consignment': consignment,
+             'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [cust_email]
+        )
 
 
 @login_required
@@ -20,6 +72,7 @@ def submit_consignment(request):
             consignment.user_profile = profile
             consignment.save()
             messages.success(request, "Consignment request submitted.")
+            send_consignment_email(consignment)
             return redirect('profile')
         else:
             messages.error(
@@ -81,7 +134,8 @@ def edit_consignment(request, consignment_id):
             return redirect('profile')
         else:
             messages.error(
-                request, 'Failed to edit consignment. Please check your submission.')
+                request, 'Failed to edit consignment. Please check your\
+                    submission.')
     else:
         form = ConsignmentForm(instance=consignment)
 
@@ -132,11 +186,13 @@ def confirm_consignment(request, consignment_id):
         consignment.status = Consignment.Status.APPROVED
         consignment.save()
         messages.success(request, 'Consignment request approved.')
+        send_consignment_email(consignment)
         return redirect(reverse('manage_consignments'))
     elif status == "decline":
         consignment.status = Consignment.Status.DECLINED
         messages.error(request, 'Consignment request declined.')
         consignment.save()
+        send_consignment_email(consignment)
         return redirect(reverse('manage_consignments'))
     else:
         messages.error(request, "Invalid consignment status.")
