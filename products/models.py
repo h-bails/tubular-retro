@@ -25,9 +25,10 @@ class Product(models.Model):
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     date_added = models.DateField(auto_now=True)
     image_1 = models.ImageField(null=True, blank=True)
+    is_sold = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['-date_added']
+        ordering = ['-is_sold']
 
     def __str__(self):
         return self.name

@@ -64,17 +64,28 @@ def checkout(request):
                         order=order,
                         product=product,
                     )
-                    order_line_item.save()
+                    if product.is_sold:
+                        bag.remove(item_id)
+                    else:
+                        product.is_sold = True
+                        order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
-                        "Please contact us for assistance.")
+                        "One of the products in your bag wasn't found in our\
+                            database. Please contact us for assistance.")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
+                except IndexError:
+                    messages.error(request, (
+                        "Your bag is empty.")
+                    )
+                    order.delete()
+                    return redirect(reverse('home'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success',
+                                    args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please check your information again.')
@@ -94,7 +105,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains in their profile
+        # Attempt to prefill the form with info the user has in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -116,7 +127,8 @@ def checkout(request):
 
     if not stripe_public_key:
         messages.warning(
-            request, 'Stripe public key is missing. Did you forget to set it in your environment?')
+            request, 'Stripe public key is missing. Did you forget to set it\
+                in your environment?')
 
     template = 'checkout/checkout.html'
     context = {

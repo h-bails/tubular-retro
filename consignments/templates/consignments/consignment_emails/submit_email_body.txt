@@ -1,4 +1,4 @@
-Howdy {{ consignment.user_profile.full_name }}!
+Howdy {{ consignment.user_profile.user.username }}!
 
 Your consignment request to Tubular Retro has been submitted.
 
