@@ -57,6 +57,38 @@ def checkout(request):
             order.original_bag = json.dumps(bag)
             order.save()
 
+            print("Order saved:")
+            print("Views.py Order Data:")
+            for key, value in form_data.items():
+                print(f"Views: {key}: {value}")
+            print(f"Views: Grand Total: {order.grand_total}")
+            print(f"Views: Original Bag: {order.original_bag}")
+            print(f"Views: pid: {order.stripe_pid}")
+            # for item_id in bag:
+            #     try:
+            #         product = Product.objects.get(id=item_id)
+            #         order_line_item = OrderLineItem(
+            #             order=order,
+            #             product=product,
+            #         )
+            #         if product.is_sold:
+            #             bag.remove(item_id)
+            #         else:
+            #             product.is_sold = True
+            #             order_line_item.save()
+            #     except Product.DoesNotExist:
+            #         messages.error(request, (
+            #             "One of the products in your bag wasn't found in our\
+            #                 database. Please contact us for assistance.")
+            #         )
+            #         order.delete()
+            #         return redirect(reverse('view_bag'))
+            #     except IndexError:
+            #         messages.error(request, (
+            #             "Your bag is empty.")
+            #         )
+            #         order.delete()
+            #         return redirect(reverse('home'))
             for item_id in bag:
                 try:
                     product = Product.objects.get(id=item_id)
@@ -64,24 +96,14 @@ def checkout(request):
                         order=order,
                         product=product,
                     )
-                    if product.is_sold:
-                        bag.remove(item_id)
-                    else:
-                        product.is_sold = True
-                        order_line_item.save()
+                    order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our\
-                            database. Please contact us for assistance.")
+                        "One of the products in your bag wasn't found in our database. "
+                        "Please contact us for assistance.")
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
-                except IndexError:
-                    messages.error(request, (
-                        "Your bag is empty.")
-                    )
-                    order.delete()
-                    return redirect(reverse('home'))
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success',

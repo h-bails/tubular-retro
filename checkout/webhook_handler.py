@@ -56,10 +56,10 @@ class StripeWH_Handler:
         stripe_charge = stripe.Charge.retrieve(
             intent.latest_charge
         )
-
         billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2)
+        print(f'Stripe grand total is {grand_total}')
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
@@ -85,6 +85,14 @@ class StripeWH_Handler:
         attempt = 1
         while attempt <= 5:
             try:
+                print("WH: Checking database for order:")
+                print(f"WH: Full Name: {shipping_details.name}")
+                print(f"WH: Email: {billing_details.email}")
+                print(f"WH: Phone Number: {shipping_details.phone}")
+                print(f"WH: total: {grand_total}")
+                print(f"WH: original_bag: {bag}")
+                print(f"WH: stripe_pid: {pid}")
+
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
@@ -100,17 +108,19 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 order_exists = True
+                print(f'WH: order exists already')
                 break
             except Order.DoesNotExist:
                 attempt += 1
-                time.sleep(5)
+                time.sleep(1)
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]}\
-                    | SUCCESS: Verified order already in database',
+                content=(f'Webhook received: {event["type"]} | SUCCESS: '
+                         'Verified order already in database'),
                 status=200)
         else:
+            print(f'WH: order does not exist, creating a new one')
             order = None
             try:
                 order = Order.objects.create(

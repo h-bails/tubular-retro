@@ -12,7 +12,7 @@ def bag_contents(request):
 
     for item_id in bag:
         product = get_object_or_404(Product, pk=item_id)
-        total += product.price
+        total += Decimal(product.price)
         bag_items.append(product)
 
     if total < settings.FREE_SHIPPING_THRESHOLD:

@@ -33,6 +33,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
     '8000-h-bails-pp5-hzpithnx2h.us2.codeanyapp.com',
+    '8001-h-bails-pp5-hzpithnx2h.us2.codeanyapp.com',
     'tubularretro-71f0ca94931e.herokuapp.com']
 
 
