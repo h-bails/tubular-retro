@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 from .models import UserProfile
 from .forms import UserProfileForm
@@ -21,9 +22,10 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully.')
         else:
-            messages.error(request, 'Failed to update profile. Please check your submission.')
+            messages.error(
+                request, 'Failed to update profile. Please check your submission.')
     else:
-        form = UserProfileForm(instance=profile) 
+        form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
     consignments = profile.consignments.all()
 

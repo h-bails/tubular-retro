@@ -150,4 +150,3 @@ class StripeWH_Handler:
             content=f'Webhook received: {event["type"]}',
             status=200
         )
-    

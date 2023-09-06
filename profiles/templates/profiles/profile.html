@@ -64,6 +64,8 @@
                             </td>
                             <td>${{ order.grand_total }}</td>
                         </tr>
+                        {% empty %}
+                        <p>You have no orders yet.</p>
                         {% endfor %}
                     </tbody>
                 </table>
@@ -76,7 +78,7 @@
             <div class="product-container col-12 my-5">
                 <div class="row">
                     {% for consignment in consignments %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
                         <div class="card h-100 border-0">
                             {% if consignment.image_1 %}
                             <img class="card-img-top img-fluid" src="{{ consignment.image_1.url }}"

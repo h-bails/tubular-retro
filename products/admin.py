@@ -14,6 +14,7 @@ class ProductAdmin(admin.ModelAdmin):
         'sku',
         'category',
         'image_1',
+        'is_sold',
     )
 
     ordering = ('date_added',)
