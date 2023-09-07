@@ -38,6 +38,8 @@ def checkout(request):
     if request.method == 'POST':
         bag = request.session.get('bag', [])
 
+        print(f'Printing bag: {bag}')
+
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -64,31 +66,7 @@ def checkout(request):
             print(f"Views: Grand Total: {order.grand_total}")
             print(f"Views: Original Bag: {order.original_bag}")
             print(f"Views: pid: {order.stripe_pid}")
-            # for item_id in bag:
-            #     try:
-            #         product = Product.objects.get(id=item_id)
-            #         order_line_item = OrderLineItem(
-            #             order=order,
-            #             product=product,
-            #         )
-            #         if product.is_sold:
-            #             bag.remove(item_id)
-            #         else:
-            #             product.is_sold = True
-            #             order_line_item.save()
-            #     except Product.DoesNotExist:
-            #         messages.error(request, (
-            #             "One of the products in your bag wasn't found in our\
-            #                 database. Please contact us for assistance.")
-            #         )
-            #         order.delete()
-            #         return redirect(reverse('view_bag'))
-            #     except IndexError:
-            #         messages.error(request, (
-            #             "Your bag is empty.")
-            #         )
-            #         order.delete()
-            #         return redirect(reverse('home'))
+
             for item_id in bag:
                 try:
                     product = Product.objects.get(id=item_id)
