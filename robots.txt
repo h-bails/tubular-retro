@@ -1,0 +1,11 @@
+User-agent: *
+
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /profile/
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /static/
+Disallow: /media/
+
+Sitemap: https://tubularretro-71f0ca94931e.herokuapp.com/sitemap.xml
