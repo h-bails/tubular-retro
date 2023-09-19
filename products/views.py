@@ -14,7 +14,8 @@ def all_products(request):
     A view to show all products, including sorting and searching
     """
 
-    products = Product.objects.all()
+    initial_products = Product.objects.filter(is_sold=False)
+    products = initial_products
     query = None
     selected_category = None
     sort = None
@@ -90,9 +91,10 @@ def add_product(request):
             messages.success(request, "Product added.")
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please check your submission.')
+            messages.error(request, 'Failed to\
+                 add product. Please check your submission.')
     else:
-        form = ProductForm()  
+        form = ProductForm()
 
     template = 'products/add_product.html'
 
@@ -120,7 +122,8 @@ def edit_product(request, product_id):
             messages.success(request, f'Successfully edited { product.name }.')
             return redirect(reverse('product_detail', args=[product_id]))
         else:
-            messages.error(request, 'Failed to edit product. Please check your submission.')
+            messages.error(request, 'Failed to\
+                           edit product. Please check your submission.')
     else:
         form = ProductForm(instance=product)
 
