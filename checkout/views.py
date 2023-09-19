@@ -74,6 +74,8 @@ def checkout(request):
                         order=order,
                         product=product,
                     )
+                    product.is_sold = True
+                    product.save()
                     order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
