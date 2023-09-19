@@ -20,13 +20,18 @@ def add_to_bag(request, item_id):
 
     if item_id in bag:
         messages.error(request, f"{product.name} is already in your bag.")
+    elif product.is_sold == True:
+        messages.error(request, f"{product.name} is not available.")
     else:
         bag.append(item_id)
         messages.success(request, f"You added {product.name} to your bag.")
 
     request.session['bag'] = bag
 
-    return redirect(redirect_url)
+    if redirect_url is None:
+        return redirect(redirect_url)
+    else:
+        return redirect('home')
 
 
 def remove_from_bag(request, item_id):
