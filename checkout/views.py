@@ -38,8 +38,6 @@ def checkout(request):
     if request.method == 'POST':
         bag = request.session.get('bag', [])
 
-        print(f'Printing bag: {bag}')
-
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -58,14 +56,6 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
-
-            print("Order saved:")
-            print("Views.py Order Data:")
-            for key, value in form_data.items():
-                print(f"Views: {key}: {value}")
-            print(f"Views: Grand Total: {order.grand_total}")
-            print(f"Views: Original Bag: {order.original_bag}")
-            print(f"Views: pid: {order.stripe_pid}")
 
             for item_id in bag:
                 try:
