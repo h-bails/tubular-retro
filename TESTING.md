@@ -266,3 +266,5 @@ Items sold on Tubular are one-offs, and are thus removed from the products displ
 Due to challenges faced with the above duplicate order issue (which was fixed but cost significant development time), I couldn't hard-code an 'is_sold' check into the checkout and webhook handler logic before the project hand-in. 
 
 Notably, most PP5 sample projects do seem to work on an 'unlimited' inventory model, and real-world inventory management is not a pass requirement for the project. Hence, I opted to leave this quite specific bug unfixed in the MVP, planning to enhance it in future updates.
+
+Back to [README.md](README.md)

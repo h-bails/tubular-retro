@@ -88,22 +88,23 @@
                                 alt="{{ consignment.name }}">
                             {% endif %}
                             <div class="card-body pb-0">
-                                <h4 class="mb-0">{{ consignment.name }}<h4>
-                                        {% if consignment.status == '1' %}
-                                        <a href="{% url 'edit_consignment' consignment.id %}">
-                                            <p>Edit</p>
-                                        </a>
-                                        <a onclick="return confirm('Are you sure you want to delete this?')" href="{% url 'delete_consignment' consignment.id %}">
-                                            <p>Delete</p>
-                                        </a>
-                                        {% endif %}
+                                <h4 class="mb-0">{{ consignment.name }}</h4>
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">{{consignment.description}}</p>
+                                        <p class="mb-0 text-left font-weight-bold">{{consignment.description}}</p>
                                     </div>
                                 </div>
+                                {% if consignment.status == '1' %}
+                                <small>
+                                    <a class="accent-3" href="{% url 'edit_consignment' consignment.id %}">
+                                        Edit</a>
+                                    <a class="accent-1" onclick="return confirm('Are you sure you want to delete this?')"
+                                        href="{% url 'delete_consignment' consignment.id %}">
+                                        Delete</a>
+                                </small>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

@@ -46,12 +46,14 @@
                             <td class="py-3">
                                 <p class="my-0"><strong>{{ product.name }}</strong></p>
                                 <p class="my-0 small text-muted">SKU: {{ product.sku|upper }}</p>
-                                <a class="remove-item text-danger float-right" data-item-id="{{ product.id }}"
-                                    id="remove_{{ product.id }}"><small>Remove</small></a>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">€{{ product.price }}</p>
+                                <a class="my-0 remove-item bold accent-1" data-item-id="{{ product.id }}"
+                                    id="remove_{{ product.id }}"><small>Remove</small></a>
                             </td>
+                            <td class="py-3">
+                        </td>
                         </tr>
                         {% endfor %}
                         <tr>
