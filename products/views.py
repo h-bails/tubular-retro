@@ -10,7 +10,7 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    """ 
+    """
     A view to show all products, including sorting and searching
     """
 
@@ -139,7 +139,7 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ 
+    """
     Delete a product from the store (admin only)
     """
 
