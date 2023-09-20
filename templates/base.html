@@ -9,8 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Tubular Retro is an online store selling retro and mid century furniture, home decor and miscellany.">
-    <meta name="keywords" content="retro, midcentury, vintage, vintage furniture, midcentury furniture, design furniture, midcentury modern, tubular retro">
+    <meta name="description"
+        content="Tubular Retro is an online store selling retro and mid century furniture, home decor and miscellany.">
+    <meta name="keywords"
+        content="retro, midcentury, vintage, vintage furniture, midcentury furniture, design furniture, midcentury modern, tubular retro">
     <meta name="author" content="Tubular Retro">
     {% endblock %}
 
@@ -53,7 +55,7 @@
         <nav id="topnav" class="navbar navbar-expand-lg row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <img class="nav-logo my-0" src="{% static 'logo-main.png' %}">
+                    <img class="nav-logo my-0" alt="tubular logo" src="{% static 'logo-main.png' %}">
                 </a>
             </div>
             <div class="col-12 col-lg-5 col-xxl-6 my-auto py-1 py-lg-0 navbar-collapse" id="categories-link">
@@ -83,9 +85,10 @@
             <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control rounded-0" type="text" name="q" placeholder="Search...">
+                        <input class="form-control rounded-0" label="searchbox" type="text" name="q"
+                            placeholder="Search...">
                         <div class="input-group-append">
-                            <button class="form-control btn accent-2" type="submit">
+                            <button class="form-control btn accent-2" aria-label="search submit button" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
