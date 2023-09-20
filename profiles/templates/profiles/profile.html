@@ -99,11 +99,17 @@
                                 {% if consignment.status == '1' %}
                                 <small>
                                     <a class="accent-3" href="{% url 'edit_consignment' consignment.id %}">
-                                        Edit</a>
+                                        Edit</a> | 
                                     <a class="accent-1" onclick="return confirm('Are you sure you want to delete this?')"
                                         href="{% url 'delete_consignment' consignment.id %}">
                                         Delete</a>
                                 </small>
+                                {% endif %}
+                                {% if consignment.status == consignment.Status.APPROVED %}
+                                <small class="accent-3">Approved</small>
+                                {% endif %}
+                                {% if consignment.status == consignment.Status.DECLINED %}
+                                <small class="accent-1">Declined</small>
                                 {% endif %}
                             </div>
                         </div>

@@ -27,7 +27,7 @@
                             alt="{{ consignment.name }}">
                         {% endif %}
                         <div class="card-body pb-0">
-                            <h4 class="mb-0">{{ consignment.name }}</h4>
+                            <h4 class="mb-0">{{ consignment.name }}
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
@@ -43,6 +43,12 @@
                                             href="{% url 'confirm_consignment' consignment.id %}?status=decline">
                                             Decline</a>
                                     </small>
+                                    {% endif %}
+                                    {% if consignment.status == consignment.Status.APPROVED %}
+                                    <small class="accent-3">Approved</small>
+                                    {% endif %}                                   
+                                    {% if consignment.status == consignment.Status.DECLINED %}
+                                    <small class="accent-1">Declined</small>
                                     {% endif %}
                                 </div>
                             </div>
