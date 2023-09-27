@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 from products.models import Product
 
@@ -20,7 +22,7 @@ def add_to_bag(request, item_id):
 
     if item_id in bag:
         messages.error(request, f"{product.name} is already in your bag.")
-    elif product.is_sold == True:
+    elif product.is_sold is True:
         messages.error(request, f"{product.name} is not available.")
     else:
         bag.append(item_id)

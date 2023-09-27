@@ -76,7 +76,8 @@ def submit_consignment(request):
             return redirect('profile')
         else:
             messages.error(
-                request, 'Failed to submit form. Please check your submission.')
+                request, 'Failed to submit form.\
+                    Please check your submission.')
     else:
         form = ConsignmentForm()
 

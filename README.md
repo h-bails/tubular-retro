@@ -11,17 +11,17 @@ Tubular is a fictional online store selling a variety of retro homeware, electro
 
 **Live Site**: The live site can be found here: [Tubular Retro](https://tubularretro-71f0ca94931e.herokuapp.com/)
 
-## User Stories
+# User Stories
 You can find all user stories and their associated UAT in [TESTING.md](TESTING.md). You can also review the Github project [here](https://github.com/users/h-bails/projects/3).
 
-## Business Model
+# Business Model
 This vintage and retro design store caters to individuals who appreciate mid-century design and aesthetics and have a penchant for retro and nostalgic items.
 
 **Primary User Persona**: Our primary user persona would be professionals in their late 20s onwards, who value individuality, are informed about retro and mid-century design, and are interested in home decor.
 
 **Revenue Generation**: Tubular’s overall business generates revenue by curating and selling a diverse range of vintage and retro-inspired products, including home decor, electronics, and miscellany. The online store could be used to supplement a brick and mortar store where customers could view and purchase items in person. Tubular’s online store generates revenue through online sales, using a direct-to-consumer (DTC) approach. Customers browse, select, and purchase products directly from the website via a single payment being taken per order via Stripe.
 
- # Marketing Plan
+# Marketing Plan
 
 Margins on second-hand items are generally quite slim, so the marketing focus for Tubular is on foundational platform hygiene, consistency, and cost-effectiveness.
 
@@ -35,8 +35,8 @@ Margins on second-hand items are generally quite slim, so the marketing focus fo
 - **Newsletter Sign-Up**: Customers will have the option to sign up for newsletters through Mailchimp.
 
 ### Social Media Advertising
-- **Instagram Advertising**: Instagram, a platform popular among vintage enthusiasts, will be used for targeted advertising towards Tubular's user persona(s). See a mockup of the IG account below.
-![Instagram Page](media/readme/instagram)
+- **Instagram Advertising**: Instagram, a platform popular among vintage enthusiasts, will be used for targeted advertising towards Tubular's user persona(s). See a mockup of the IG account below. <br>
+![Instagram Page](media/readme/instagram-mockup.png)
 
 - **Facebook Advertising**: While not the primary platform, a Facebook business account will be created for running ads.
 - **Engagement Activities**: Occasional giveaways, competitions, or influencer placements may be considered to organically grow the follower base.
@@ -56,7 +56,7 @@ Wireframes and the Entity-Relationship Diagram (ERD) were created in Figma as pa
 
 - **ERD**: The ERD and data models can be found [here](https://www.figma.com/file/N9dcA5BWg6yceP3aGNKVbp/entity-relationship-diagram-pp4-(Copy)?type=whiteboard&node-id=0%3A1&t=yvOHFMV3iCvsMgfi-1).
 
-## Included Django Apps
+# Included Django Apps
 
 ### Home
 The Home app serves as the primary landing page, providing users with an overview of Tubular and essential information. It acts as the entry point to the 'Products' pages.
@@ -79,11 +79,13 @@ The Consignments feature allows users to request the sale of their own items thr
 ### Contact
 The Contact app facilitates communication between users and site owners. It includes a contact form for users to send messages to the site owners and provides general contact information.
 
-# Other Features
-
-Tubular offers several additional features to enhance the user experience:
+## Other Features
 
 - **Top Navigation**: The top navigation provides options to view products by different categories, access the 'About' and 'Contact Us' pages, perform site searches, access user account features, and view the shopping bag. A collapsible navigation menu is available for medium and small screens.
+
+# Testing
+
+View a list of tests performed in the [Testing.md](TESTING.md) document.
 
 # Bugs
 
@@ -97,25 +99,27 @@ View a list of fixed bugs and known issues in the [Testing.md](TESTING.md) docum
 
 - **Admin - Reason for Consignment Rejection**: Admins will have the ability to provide a reason for rejecting consignment requests, enhancing communication with users.
 
+# Deployment
+
 # Tools and Libraries Used
 
-- **Bootstrap 5**: Utilized for [UI components](https://getbootstrap.com/) to create an aesthetically pleasing and responsive user interface.
+- **Bootstrap 5**: Used for [UI components](https://getbootstrap.com/) to create an aesthetically pleasing and responsive user interface.
 
-- **AWS (Amazon Web Services) S3**: Used for image hosting, serving, and storing static files, ensuring efficient content delivery.
+- **AWS (Amazon Web Services) S3**: Used for image hosting, serving, and storing static files.
 
 - **Stripe**: Integrated to [process payments](https://stripe.com/) securely and efficiently.
 
-- **Am I Responsive**: Employed to create [cross-device mockups](http://ami.responsivedesign.is/) for testing and ensuring a responsive design.
+- **Am I Responsive**: Used to create [cross-device mockups](http://ami.responsivedesign.is/) for testing and ensuring a responsive design.
 
-- **Figma**: Utilized for [wireframing](https://www.figma.com/) and creating an Entity Relationship Diagram (ERD) to plan the project's structure and layout.
+- **Figma**: Used for [wireframing](https://www.figma.com/) and creating an Entity Relationship Diagram (ERD) to plan the project's structure and layout.
 
 - **Canva**: Used for [brand design](https://www.canva.com/) and creating mockups to establish a consistent visual identity.
 
-- **GitHub**: Employed for [version control](https://github.com/).
+- **GitHub**: Used for [version control](https://github.com/).
 
 - **xml-sitemaps**: Used to generate a [sitemap](https://www.xml-sitemaps.com/).
 
-- **seoptimer**: Employed for generating a [robots.txt file](https://www.seoptimer.com/robots-txt-validator).
+- **seoptimer**: Used for generating a [robots.txt file](https://www.seoptimer.com/robots-txt-validator).
 
 - **CSV to JSON Converter**: Used to format Google Sheets data into [JSON format](https://www.convertcsv.com/csv-to-json.htm) for data integration.
 
@@ -125,7 +129,7 @@ View a list of fixed bugs and known issues in the [Testing.md](TESTING.md) docum
 
 - **FontAwesome**: USed for incorporating icons in the UI.
 
-- **Google Fonts**: Utilized for selecting [typography](https://fonts.google.com/).
+- **Google Fonts**: Used for selecting [typography](https://fonts.google.com/).
 
 # Other Credits
 
@@ -134,4 +138,3 @@ View a list of fixed bugs and known issues in the [Testing.md](TESTING.md) docum
 - **Image and Product Credits**: Credits go to Flickr users under the Creative Commons license, including [D68 design+art](https://www.flickr.com/photos/158424157@N03/) and [Planet Utopia](https://www.flickr.com/photos/planetutopia/), for a portion of site images and product descriptions. Additional images are sourced from [Unsplash](https://unsplash.com/) and Canva.
 
 - **Homepage Hero Video**: Videos featured in the homepage hero video are from [Unsplash](https://unsplash.com/).
-

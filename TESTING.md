@@ -224,14 +224,24 @@ I manually inspected each feature or component of the application to ensure they
 ## Stripe payments
 
 All payments were successfully handled by Stripe webhooks at the time of release.
+
 ## Accessibility
 
 I ran the program through the AIM accessibility checker to ensure the site adhered to WCAG best practices.
 
 See the results [here](https://wave.webaim.org/report#/https://tubularretro-71f0ca94931e.herokuapp.com/).
+
 ## Responsiveness
 
 I ensured that the application was responsive by checking its look and functionality across a variety of devices and screen sizes. The site was designed in a mobile-first manner using standard Bootstrap breakpoints.
+
+## Code quality
+
+- HTML was passed through the W3 validator - see the results [here](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftubularretro-71f0ca94931e.herokuapp.com%2F).
+- CSS was passed through the W3C validator - see the results [here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftubularretro-71f0ca94931e.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+- Python code was passed through the Code Institute linter with no errors - see the results [here](media/readme/python-linter-screenshots).
+- Javascript code was passed through JSHint with no errors - see the results [here](media/readme/jshint-screenshots).
+
 
 ## Compatability
 

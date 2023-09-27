@@ -23,7 +23,8 @@ def profile(request):
             messages.success(request, 'Profile updated successfully.')
         else:
             messages.error(
-                request, 'Failed to update profile. Please check your submission.')
+                request, 'Failed to update profile.\
+                    Please check your submission.')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
