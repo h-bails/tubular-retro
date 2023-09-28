@@ -59,8 +59,8 @@
                 </a>
             </div>
             <div class="col-12 col-lg-5 col-xxl-6 my-auto py-1 py-lg-0 navbar-collapse" id="categories-link">
-                <div class="navbar-nav justify-content-start">
-                    <li class="nav-link dropdown">
+                <ul class="navbar-nav justify-content-start">
+                    <li class="nav-item dropdown">
                         <a class="font-weight-bold nav-link light" href="#" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             Shop
@@ -74,19 +74,21 @@
                             <a href="{% url 'products' %}" class="bold dropdown-item">All products</a>
                         </div>
                     </li>
-                    <li class="nav-link light"><a class="font-weight-bold nav-link light" href="#">
+                    <li class="nav-item light"><a class="font-weight-bold nav-link light" href="#">
                             About
-                        </a></li>
-                    <li class="nav-link light"><a class="font-weight-bold nav-link light" href="{% url 'contact' %}">
+                        </a>
+                    </li>
+                    <li class="nav-item light"><a class="font-weight-bold nav-link light" href="{% url 'contact' %}">
                             Contact
-                        </a></li>
-                </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <label for="searchbox" class="sr-only">Search</label>
-                        <input class="form-control rounded-0" label="searchbox" type="text" name="q"
+                        <input id="searchbox" class="form-control rounded-0" label="searchbox" type="text" name="q"
                             placeholder="Search...">
                         <div class="input-group-append">
                             <button class="form-control btn accent-2" aria-label="topnav-search" type="submit">
@@ -144,7 +146,7 @@
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}

@@ -235,10 +235,13 @@ h4 {
     .nav-logo {
         width: 9em;
     }
-    
+
     #mc_embed_signup {
-    width: 50%;
-    margin: auto;
+        width: 50%;
+        margin: auto;
+        background: #fff;
+        clear: left;
+        font: 14px 'DM Sans', sans-serif;
     }
 }
 
