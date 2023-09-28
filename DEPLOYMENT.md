@@ -101,7 +101,7 @@ When you deploy to Heroku, the dependencies you specify in your `requirements.tx
 
 ### 2. Heroku CLI
 
-The quickest way to set up this project in Heroku is to [install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) on your machine, but you can also follow the following steps directly from your Heroku dashboard.
+The quickest way to set up this project in Heroku is to [install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) in your environment, but you can also follow the following steps directly from your Heroku dashboard.
 
 ### 3. Log in to Heroku
 
@@ -125,9 +125,9 @@ There are various environment variables that need to be set for Heroku.
 - **SECRET_KEY:** Generate a secret key for your Django project. You can use online generators like Djecrety to do this.
 - **DEBUG:** Set it to False for production.
 - **Stripe keys:** You'll need to set `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`. If you did not do so previously, create a Stripe account to get your keys. [Here](https://stripe.com/docs/keys#:~:text=You%20can%20find%20your%20secret,you%20can%20see%20these%20values) are instructions to create a Stripe account and getting your keys. You'll also need to [create a webhook endpoint](https://stripe.com/docs/development/dashboard/register-webhook) for your site and take note of the webhook key.
-- **AWS keys:** If you have not done so already, set up your `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_STORAGE_BUCKET_NAME`. Code Institute provides a great guide on how to do this [here](https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20changes%20sheet.pdf).
+- **AWS keys:** If you have not done so already, set up your `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_STORAGE_BUCKET_NAME`. Code Institute provides a great guide on how to do this [here](https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20changes%20sheet.pdf). Note that the AWS bucket name, region, custom domain and object parameters will need to be set up directly in `settings.py`. 
 - **Email settings:**  Configure email settings such as `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_HOST_USER`, and `EMAIL_HOST_PASSWORD` to enable email functionality in the live project. I used Gmail for this, but you can use the email provider of your choice. [Here](https://www.abstractapi.com/guides/django-send-email) is a handy guide covering Gmail setup, and [here](https://docs.djangoproject.com/fr/2.2/topics/email/) is the official Django send_email documentation which can be applied to any email provider.
-**Database URL:**: To generate a managed PostgreSQL database, visit the ElephantSQL website and either create a new account or log in to your existing account. After logging in, [create a new instance](https://www.elephantsql.com/docs/index.html) and take note of the URL.
+- **Database URL:**: To generate a managed PostgreSQL database, visit the ElephantSQL website and either create a new account or log in to your existing account. After logging in, [create a new instance](https://www.elephantsql.com/docs/index.html) and take note of the URL.
 
 You can easily set the environment variables on Heroku using the `heroku config:set` command for each variable:
 
