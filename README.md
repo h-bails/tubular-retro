@@ -8,6 +8,8 @@ Tubular is a fictional online store selling a variety of retro homeware, electro
 - Expiration: Any future date in the format MM/YY
 - CVV: Any 3-digit number
 - Postcode: Any 5-digit letter/number combination
+  
+NOTE: Payments made using an actual payment card will fail and the card will not be charged. No orders made will be fulfilled
 
 **Live Site**: The live site can be found here: [Tubular Retro](https://tubularretro-71f0ca94931e.herokuapp.com/)
 
@@ -100,6 +102,8 @@ View a list of fixed bugs and known issues in the [Testing.md](TESTING.md) docum
 - **Admin - Reason for Consignment Rejection**: Admins will have the ability to provide a reason for rejecting consignment requests, enhancing communication with users.
 
 # Deployment
+
+Find deployment instructions in (DEPLOYMENT.md)[DEPLOYMENT.md].
 
 # Tools and Libraries Used
 
