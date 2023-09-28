@@ -48,7 +48,7 @@ In the project's settings (`env/settings.py`), you'll find various environment v
 
 - **SECRET_KEY:** Generate a secret key for your Django project. You can use online generators like Djecrety to do this.
 - **DEBUG:** Set it to True for local development and debugging, and False for production.
-- **Stripe keys:** You'll need to set `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`. Create a Stripe account to get your keys. [Here](https://stripe.com/docs/keys#:~:text=You%20can%20find%20your%20secret,you%20can%20see%20these%20values) are instructions to create a Stripe account and getting your keys.
+- **Stripe keys:** You'll need to set `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`. Create a Stripe account to get your keys. [Here](https://stripe.com/docs/keys#:~:text=You%20can%20find%20your%20secret,you%20can%20see%20these%20values) are instructions to create a Stripe account and getting your keys. You'll also need to [create a webhook endpoint](https://stripe.com/docs/development/dashboard/register-webhook) for your site.
 - **AWS keys:** If you plan to use AWS S3 for static and media files storage, set `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_STORAGE_BUCKET_NAME`. Code Institute provides a great guide on how to do this [here](https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20changes%20sheet.pdf).
 - **Email settings:** In a development/DEBUG environment, the project is set up to simply print emails to the terminal. No further action is needed.
 
@@ -90,3 +90,80 @@ To access the Django admin panel, create a superuser account:
 ```bash
     python manage.py createsuperuser
 ```
+## Setting Up in Heroku
+
+### 1. Heroku requirements
+
+If you don't have a Heroku account, [sign up at Heroku](https://www.heroku.com/).
+
+When you deploy to Heroku, the dependencies you specify in your `requirements.txt` file are automatically installed before app startup. Use `pip freeze > requirements.txt` in your dev environment to make sure the package versions you've installed are correctly reflected in `requirements.txt`.
+
+
+### 2. Heroku CLI
+
+The quickest way to set up this project in Heroku is to [install the Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) on your machine, but you can also follow the following steps directly from your Heroku dashboard.
+
+### 3. Log in to Heroku
+
+Open your terminal and log in to Heroku using the following command:
+
+```bash
+heroku login
+```
+
+### 4. Create a Heroku App
+
+Create a new Heroku app with a unique name:
+```bash
+heroku create your-app-name
+```
+
+### 5. Configure Environment Variables
+
+There are various environment variables that need to be set for Heroku. 
+
+- **SECRET_KEY:** Generate a secret key for your Django project. You can use online generators like Djecrety to do this.
+- **DEBUG:** Set it to False for production.
+- **Stripe keys:** You'll need to set `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`. If you did not do so previously, create a Stripe account to get your keys. [Here](https://stripe.com/docs/keys#:~:text=You%20can%20find%20your%20secret,you%20can%20see%20these%20values) are instructions to create a Stripe account and getting your keys. You'll also need to [create a webhook endpoint](https://stripe.com/docs/development/dashboard/register-webhook) for your site and take note of the webhook key.
+- **AWS keys:** If you have not done so already, set up your `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_STORAGE_BUCKET_NAME`. Code Institute provides a great guide on how to do this [here](https://codeinstitute.s3.amazonaws.com/fullstack/AWS%20changes%20sheet.pdf).
+- **Email settings:**  Configure email settings such as `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_HOST_USER`, and `EMAIL_HOST_PASSWORD` to enable email functionality in the live project. I used Gmail for this, but you can use the email provider of your choice. [Here](https://www.abstractapi.com/guides/django-send-email) is a handy guide covering Gmail setup, and [here](https://docs.djangoproject.com/fr/2.2/topics/email/) is the official Django send_email documentation which can be applied to any email provider.
+**Database URL:**: To generate a managed PostgreSQL database, visit the ElephantSQL website and either create a new account or log in to your existing account. After logging in, [create a new instance](https://www.elephantsql.com/docs/index.html) and take note of the URL.
+
+You can easily set the environment variables on Heroku using the `heroku config:set` command for each variable:
+
+```bash
+heroku config:set SECRET_KEY=your_secret_key
+heroku config:set DEBUG=False
+heroku config:set STRIPE_PUBLIC_KEY=your_stripe_public_key
+heroku config:set STRIPE_SECRET_KEY=your_stripe_secret_key
+heroku config:set STRIPE_WH_SECRET=your_stripe_webhook_key
+heroku config:set AWS_ACCESS_KEY_ID=your_aws_access_key
+heroku config:set AWS_SECRET_ACCESS_KEY=your_aws_secret_key
+heroku config:set AWS_STORAGE_BUCKET_NAME=your_bucket_name
+heroku config:set EMAIL_HOST=your_email_host
+heroku config:set EMAIL_PORT=your_email_port
+heroku config:set EMAIL_HOST_USER=your_email_username
+heroku config:set EMAIL_HOST_PASSWORD=your_email_password
+heroky config:set DATABASE_URL=your_database_url
+```
+
+Or you can do this via the Heroku dashboard.
+
+### 6. Push to Heroku
+
+Push your code to the Heroku app's repository:
+```bash
+git push heroku main
+```
+
+### 7. Run Migrations and Create Superuser (Optional)
+
+Run the database migrations and create a superuser (if needed) on Heroku:
+
+```bash
+heroku run python manage.py migrate
+heroku run python manage.py createsuperuser
+```
+
+You should have successfully deployed Tubular to Heroku. [Here](https://devcenter.heroku.com/articles/deploying-python) is the official Heroku documentation if support is needed.
+
