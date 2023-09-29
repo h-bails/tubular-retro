@@ -5,7 +5,7 @@ class Category(models.Model):
     '''Model for the categories'''
     name = models.CharField(max_length=254)
     description = models.TextField(max_length=500)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(default='media/default_category_image.jpg', null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -29,7 +29,7 @@ class Product(models.Model):
     is_sold = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['-is_sold']
+        ordering = ['-date_added']
 
     def __str__(self):
         return self.name
