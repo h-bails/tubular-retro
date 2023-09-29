@@ -1,6 +1,8 @@
 # About this project
 
-Tubular is a fictional online store selling a variety of retro homeware, electronics, and memorabilia, as well as mid-century design furniture. Each item in the store is one of a kind and sold in used/preloved condition. This project was built to fulfill the requirements of the final project in Code Institute’s Full Stack Development Diploma - eCommerce specialization. The app should be considered a minimum viable product (MVP) of an ecommerce application.
+Tubular is a fictional online store selling a variety of retro homeware, electronics, and memorabilia, as well as mid-century design furniture. Each item in the store is one of a kind and sold in used/preloved condition. The site also allows users to submit their own items for consignment in the store, and admins can approve or decline the consignment requests. Admins can also add, edit, or delete products on the site without using the Django admin panel.
+
+This project was built to fulfill the requirements of the final project in Code Institute’s Full Stack Development Diploma - eCommerce specialization. The app should be considered a minimum viable product (MVP) of an ecommerce application.
 
 **Testing Payment Functionality**: If you wish to test the purchase functionality, please use Stripe’s mock payment details:
 
@@ -76,7 +78,7 @@ The Bag app handles the shopping cart functionality, enabling users to add, remo
 The Checkout app manages the order completion process, from collecting shipping details to processing payments via Stripe. It interacts with the Stripe payment gateway for secure transactions. Redundancy is built in to ensure the order is processed successfully, even in cases of page reloads or connectivity issues.
 
 ### Consignments
-The Consignments feature allows users to request the sale of their own items through the store. Submitters receive email notifications upon request submission. Admins can approve or decline consignment requests through a dashboard, and users are notified of the outcome via email. Approved consignments lead to discussions between the site owner and submitter.
+The Consignments feature allows users to request the sale of their own items through the store. Submitters receive email notifications upon request submission. Admins can approve or decline consignment requests through the Consignment Management dashboard, and users are notified of the outcome via email. Approved consignments lead to further discussion between the site owner and submitter.
 
 ### Contact
 The Contact app facilitates communication between users and site owners. It includes a contact form for users to send messages to the site owners and provides general contact information.
@@ -141,4 +143,4 @@ Find deployment instructions in (DEPLOYMENT.md)[DEPLOYMENT.md].
 
 - **Image and Product Credits**: Credits go to Flickr users under the Creative Commons license, including [D68 design+art](https://www.flickr.com/photos/158424157@N03/) and [Planet Utopia](https://www.flickr.com/photos/planetutopia/), for a portion of site images and product descriptions. Additional images are sourced from [Unsplash](https://unsplash.com/) and Canva.
 
-- **Homepage Hero Video**: Videos featured in the homepage hero video are from [Unsplash](https://unsplash.com/).
+- **Homepage Hero Video**: Code adapted from [StartBootstrap](https://startbootstrap.com/snippets/video-header) and photos and videos from [Pexels](https://pexels.com/) under the CC license.
