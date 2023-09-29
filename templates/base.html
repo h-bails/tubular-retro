@@ -74,7 +74,7 @@
                             <a href="{% url 'products' %}" class="bold dropdown-item">All products</a>
                         </div>
                     </li>
-                    <li class="nav-item light"><a class="font-weight-bold nav-link light" href="#">
+                    <li class="nav-item light"><a class="font-weight-bold nav-link light" href="{% url 'about' %}">
                             About
                         </a>
                     </li>
@@ -180,7 +180,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}

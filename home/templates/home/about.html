@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <hr>
+            <h2 class="logo-font mb-4">About us</h2>
+            <h5 class="text-muted">Learn more about Tubular Retro</h5>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>
+            Tubular is a fictional online store selling a variety of retro homeware, electronics, and memorabilia, as well as mid-century design furniture. Each item in the store is one of a kind and sold in used/preloved condition. This project was built to fulfill the requirements of the final project in Code Institute’s Full Stack Development Diploma - eCommerce specialization. The app should be considered a minimum viable product (MVP) of an ecommerce application.
+            </p>
+            <h4>Testing Payment Functionality</h4>
+            <p>
+                If you wish to test the purchase functionality, please use Stripe’s mock payment details:
+            </p>
+            <ul>
+                <li>Card no: 4242424242424242</li>
+                <li>Expiration: Any future date in the format MM/YY</li>
+                <li>CVV: Any 3-digit number</li>
+                <li>Postcode: Any 5-digit letter/number combination</li>
+            </ul>
+            <p>
+                <strong>NOTE:</strong> Payments made using an actual payment card will fail and the card will not be charged. No orders made will be fulfilled.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
