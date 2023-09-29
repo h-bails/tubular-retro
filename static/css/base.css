@@ -221,6 +221,9 @@ h4 {
 #mc_embed_signup {
     width: 100%;
     margin: auto;
+    background: #fff;
+    clear: left;
+    font: 14px 'DM Sans', sans-serif;
 }
 
 
