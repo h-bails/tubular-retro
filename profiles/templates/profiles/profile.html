@@ -49,7 +49,7 @@
                         {% for order in orders %}
                         <tr>
                             <td>
-                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                                <a href="{% url 'order_history' order.order_number %}" class="accent-3" title="{{ order.order_number }}">
                                     {{ order.order_number|truncatechars:6 }}
                                 </a>
                             </td>
@@ -81,10 +81,10 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
                         <div class="card h-100 border-0">
                             {% if consignment.image_1 %}
-                            <img class="card-img-top img-fluid" src="{{ consignment.image_1.url }}"
+                            <img class="card-img-top product-img img-fluid" src="{{ consignment.image_1.url }}"
                                 alt="{{ consignment.name }}">
                             {% else %}
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg"
+                            <img class="card-img-top product-img img-fluid" src="{{ MEDIA_URL }}noimage.jpg"
                                 alt="{{ consignment.name }}">
                             {% endif %}
                             <div class="card-body pb-0">

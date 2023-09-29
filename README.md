@@ -147,4 +147,6 @@ Find deployment instructions in [DEPLOYMENT.md](DEPLOYMENT.md).
 
 - **Image and Product Credits**: Credits go to Flickr users under the Creative Commons license, including [D68 design+art](https://www.flickr.com/photos/158424157@N03/) and [Planet Utopia](https://www.flickr.com/photos/planetutopia/), for a portion of site images and product descriptions. Additional images are sourced from [Unsplash](https://unsplash.com/) and Canva.
 
+- **Card images**: [This](https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width) Stack Overflow thread helped me adjust the product card images to a consistent size.
+
 - **Homepage Hero Video**: Code adapted from [StartBootstrap](https://startbootstrap.com/snippets/video-header) and photos and videos from [Pexels](https://pexels.com/) under the CC license.
