@@ -70,6 +70,51 @@ h4 {
     color: #d8460a;
 }
 
+.video-container {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-container h1 {
+    font-size: 3rem;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-container .container {
+  position: relative;
+  z-index: 2;
+}
+
+.video-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+
 .btt-button {
     height: 42px;
     width: 42px;
@@ -81,6 +126,14 @@ h4 {
 .btt-link,
 .remove-item {
     cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.product-link:hover {
+    color: #007291;
 }
 
 /* from Bulma */
@@ -102,9 +155,19 @@ h4 {
     min-width: 260px;
 }
 
+.btn-lg {
+    background: #361b1b;
+    color: #faedcd;
+}
+
 .btn-black {
-    background: black;
-    color: white;
+    background: #361b1b;
+    color: #faedcd;
+}
+
+.btn-lg:hover, .btn-black:hover {
+    background: #9b4923;
+    color: #f5c603;
 }
 
 .text-black {
@@ -224,13 +287,11 @@ h4 {
 }
 
 #mc_embed_signup {
-    width: 100%;
+    width: 60%;
     margin: auto;
-    background: #fff;
     clear: left;
     font: 14px 'DM Sans', sans-serif;
 }
-
 
 /* -------------------------------- Media Queries */
 
@@ -335,8 +396,18 @@ h4 {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* pad the top a bit when navbar is collapsed on mobile; don't show hero video on smaller sreens */
 @media (max-width: 991px) {
+
+    .video-container {
+        background: url('https://images.pexels.com/photos/3642350/pexels-photo-3642350.jpeg?auto=compress&cs=tinysrgb&w=800') black no-repeat center center scroll;
+        background-size: cover;
+    }
+
+    .video-container video {
+        display: none;
+    }
+
     .header-container {
         padding-top: 116px;
     }

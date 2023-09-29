@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="container header-container d-lg-none">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -10,20 +10,29 @@
 {% endblock%}
 
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1>This is where your retro dreams come true.</h1>
-            <div>
-                <h4>
-                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 py-3">Start
+<!-- Hero video -->
+<div class="video-container">
+  <div class="overlay"></div>
+
+  <!-- The HTML5 video element that will create the background video on the header -->
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://player.vimeo.com/external/512311615.sd.mp4?s=8bfe0de0e21160b08e4b3d16e8d2a1d3f7ed8f7e&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+  </video>
+
+  <!-- The header content -->
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">This is where your retro dreams come true.</h1>
+        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 py-3">Start
                         exploring</a>
-                </h4>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
-<div class="container pb-2">
+
+<!-- MailChimp signup form -->
+<div class="newsletter-container py-2">
     <div class="mb-2" id="mc_embed_shell">
         <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
         <div id="mc_embed_signup">
