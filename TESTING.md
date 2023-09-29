@@ -242,8 +242,8 @@ I ensured that the application was responsive by checking its look and functiona
 
 ## Code quality
 
-- HTML was passed through the W3 validator - see the results [here](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftubularretro-71f0ca94931e.herokuapp.com%2F).
-- CSS was passed through the W3C validator - see the results [here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftubularretro-71f0ca94931e.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+- HTML was passed through the W3 validator with no errors - see the results [here](https://validator.w3.org/nu/?doc=https%3A%2F%2Ftubularretro-71f0ca94931e.herokuapp.com%2F).
+- CSS was passed through the W3C validator with no errors - see the results [here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ftubularretro-71f0ca94931e.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
 - Python code was passed through the Code Institute linter with no errors - see the results [here](media/readme/python-linter-screenshots).
 - Javascript code was passed through JSHint with no errors - see the results [here](media/readme/jshint-screenshots).
 
@@ -264,7 +264,7 @@ and operating systems:
 
 ## Performance
 
-I ran a Lighthouse report to make sure that the application responded quickly. See the results for the [Homepage](https://pagespeed.web.dev/analysis/https-tubularretro-71f0ca94931e-herokuapp-com/fmb7xj6lh7?form_factor=desktop) and [All Products](https://pagespeed.web.dev/analysis/https-tubularretro-71f0ca94931e-herokuapp-com-products/9mwcvs6iby?form_factor=desktop) pages.
+I ran a Lighthouse report to make sure that the application responded quickly. See the results for the [Homepage](https://pagespeed.web.dev/analysis/https-tubularretro-71f0ca94931e-herokuapp-com/4d80pnri8v?form_factor=desktop) and [All Products](https://pagespeed.web.dev/analysis/https-tubularretro-71f0ca94931e-herokuapp-com-products/ebb80da2p1?form_factor=desktop) pages.
 ## Bugs fixed
 
 I fixed several bugs during the course of the project.

@@ -40,12 +40,14 @@
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-3">
             <div class="card h-100 border-0">
                 {% if category.image %}
-                <a href="{% url 'products' %}?category={{ category.name }}"><img class="card-img-top product-img img-fluid"
-                        src="{{ category.image.url }}" alt="{{ category.name }}">
+                <a href="{% url 'products' %}?category={{ category.name }}"><img
+                        class="card-img-top product-img img-fluid" src="{{ category.image.url }}"
+                        alt="{{ category.name }}">
                 </a>
                 {% else %}
-                <a href="{% url 'products' %}?category={{ category.name }}"><img class="card-img-top product-img img-fluid"
-                        src="{{ MEDIA_URL }}noimage.jpg" alt="{{ category.name }}">
+                <a href="{% url 'products' %}?category={{ category.name }}"><img
+                        class="card-img-top product-img img-fluid" src="{{ MEDIA_URL }}noimage.jpg"
+                        alt="{{ category.name }}">
                 </a>
                 {% endif %}
                 <div class="card-body pb-0">

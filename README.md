@@ -43,7 +43,7 @@ Margins on second-hand items are generally quite slim, so the marketing focus fo
 ### Social Media Advertising
 - **Instagram Advertising**: Instagram, a platform popular among vintage enthusiasts, will be used for targeted advertising towards Tubular's user persona(s). See a mockup of the IG account below. 
 
-<br>
+
 ![Instagram Page](media/readme/instagram-mockup.png)
 
 - **Facebook Advertising**: While not the primary platform, a Facebook business account will be created for running ads.
