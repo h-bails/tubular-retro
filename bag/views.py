@@ -33,7 +33,7 @@ def add_to_bag(request, item_id):
     if redirect_url is None:
         return redirect(redirect_url)
     else:
-        return redirect('home')
+        return redirect('products')
 
 
 def remove_from_bag(request, item_id):

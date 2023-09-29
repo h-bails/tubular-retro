@@ -71,12 +71,12 @@ h4 {
 }
 
 .video-container {
-  position: relative;
-  background-color: black;
-  height: 100vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
 }
 
 .video-container h1 {
@@ -84,34 +84,34 @@ h4 {
 }
 
 .video-container video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .video-container .container {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 .video-container .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
 }
 
 
@@ -165,7 +165,8 @@ a:hover {
     color: #faedcd;
 }
 
-.btn-lg:hover, .btn-black:hover {
+.btn-lg:hover,
+.btn-black:hover {
     background: #9b4923;
     color: #f5c603;
 }
@@ -189,7 +190,7 @@ a:hover {
 }
 
 .products-container {
-    padding-top: 164px;
+    padding-top: 120px;
 }
 
 .message-container {
@@ -205,6 +206,12 @@ a:hover {
 
 .toast-capper {
     height: 2px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -394,6 +401,11 @@ a:hover {
         text-align: left;
         padding-left: 0;
     }
+
+    .nav-item {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile; don't show hero video on smaller sreens */
@@ -409,7 +421,7 @@ a:hover {
     }
 
     .header-container {
-        padding-top: 116px;
+        padding-top: 90px;
     }
 
     body {
@@ -442,5 +454,13 @@ a:hover {
     .btn.btn-black.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
+    }
+}
+
+/* Make card images taller on mobile devices */
+
+@media (max-width: 575px) {
+    .card-img-top {
+        height: 35vw;
     }
 }

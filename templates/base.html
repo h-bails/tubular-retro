@@ -59,7 +59,7 @@
                 </a>
             </div>
             <div class="col-12 col-lg-5 col-xxl-6 my-auto py-1 py-lg-0 navbar-collapse" id="categories-link">
-                <ul class="navbar-nav justify-content-start">
+                <ul class="navbar-nav justify-content-evenly">
                     <li class="nav-item dropdown">
                         <a class="font-weight-bold nav-link light" href="#" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
@@ -182,7 +182,7 @@
     {% block postloadjs %}
     <script>
         $('.toast').toast('show');
-        setTimeout(function() {
+        setTimeout(function () {
             $('.toast').toast('hide');
         }, 5000);
     </script>
