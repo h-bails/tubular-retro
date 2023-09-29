@@ -227,9 +227,14 @@ All payments were successfully handled by Stripe webhooks at the time of release
 
 ## Accessibility
 
-I ran the program through the AIM accessibility checker to ensure the site adhered to WCAG best practices.
+I ran the program through the WebAIM accessibility checker to ensure the site adhered to WCAG best practices.
 
 See the results [here](https://wave.webaim.org/report#/https://tubularretro-71f0ca94931e.herokuapp.com/).
+
+Note that the accessibility checker does flag the homepage hero text and asterisks as low-contrast, but I believe this is due to the fact that the site content is moved around in the checker and appears very differently to the live site. In the real site, the hero text appears on a darkened background and the asterisks appear on a white background.
+
+WebAIM checker: ![WCAG Screenshot](media/wcag-screenshot.png) 
+Live site: ![Live site](media/live-site-accessibility.png) 
 
 ## Responsiveness
 
