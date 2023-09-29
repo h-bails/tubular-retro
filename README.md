@@ -3,6 +3,8 @@
 Tubular is a fictional online store selling a variety of retro homeware, electronics, and memorabilia, as well as mid-century design furniture. Each item in the store is one of a kind and sold in used/preloved condition. The site also allows users to submit their own items for consignment in the store, and admins can approve or decline the consignment requests. Admins can also add, edit, or delete products on the site without using the Django admin panel.
 
 This project was built to fulfill the requirements of the final project in Code Institute’s Full Stack Development Diploma - eCommerce specialization. The app should be considered a minimum viable product (MVP) of an ecommerce application.
+<br>
+![Live site image](media/live-site-responsive.png)
 
 **Testing Payment Functionality**: If you wish to test the purchase functionality, please use Stripe’s mock payment details:
 
@@ -39,7 +41,9 @@ Margins on second-hand items are generally quite slim, so the marketing focus fo
 - **Newsletter Sign-Up**: Customers will have the option to sign up for newsletters through Mailchimp.
 
 ### Social Media Advertising
-- **Instagram Advertising**: Instagram, a platform popular among vintage enthusiasts, will be used for targeted advertising towards Tubular's user persona(s). See a mockup of the IG account below. <br>
+- **Instagram Advertising**: Instagram, a platform popular among vintage enthusiasts, will be used for targeted advertising towards Tubular's user persona(s). See a mockup of the IG account below. 
+
+<br>
 ![Instagram Page](media/readme/instagram-mockup.png)
 
 - **Facebook Advertising**: While not the primary platform, a Facebook business account will be created for running ads.
@@ -105,7 +109,7 @@ View a list of fixed bugs and known issues in the [Testing.md](TESTING.md) docum
 
 # Deployment
 
-Find deployment instructions in (DEPLOYMENT.md)[DEPLOYMENT.md].
+Find deployment instructions in [DEPLOYMENT.md](DEPLOYMENT.md).
 
 # Tools and Libraries Used
 
