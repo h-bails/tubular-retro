@@ -65,6 +65,11 @@ h4 {
     background: #361b1b;
 }
 
+.nav-link:hover,
+.form-control:hover {
+    color: #d8460a;
+}
+
 .btt-button {
     height: 42px;
     width: 42px;
